@@ -1,0 +1,33 @@
+/* This css file contains site-utilities which will define the styling theme across the site */
+.container {
+    margin: 0 auto;         /* 0 on top & bottom, auto on left & right */
+    overflow: auto;
+    padding: 0 28px;
+    width: 100%;
+}
+
+.navbar {
+    justify-content: left;     
+}
+
+.search-box {
+    position: fixed;
+    top: 1rem;
+    left: 12.5rem;
+    display: flex;
+    margin: auto, 0;
+}
+
+#search-bar {
+    width: 38rem;
+    height: 30px;
+    border: 2px solid var(--primary-color-light);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
