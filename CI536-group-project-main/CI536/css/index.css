@@ -38,7 +38,7 @@ html, a {
 
 .navbar ul {
     position: relative;
-    top: 1.6rem;
+    top: 1.55rem;
     left: 3rem;
     display: flex;
     list-style-type: none;
@@ -50,4 +50,5 @@ html, a {
 } .navbar a:hover {
     color: var(--text-primary);
     background-color: var(--primary-color-light);
+    border-bottom: 2px solid var(--secondary-color);
 }
