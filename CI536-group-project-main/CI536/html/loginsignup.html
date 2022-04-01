@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../javascript/index.js"></script>
+    <script src="https://kit.fontawesome.com/b94f75224e.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="../css/loginsignup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/ Sign up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="switch">
+            <div class="login" onclick="tab1();">Login</div>
+            <div class="signup" onclick="tab2();">Sign Up</div>
+        </div>
+
+        <div class="outer">
+            <form id="form">
+                <div class="page">
+                    <label>Login Form</label>
+                    <div class="element">
+                        <input type="text" placeholder="Username">
+                        <span class="fas fa-user"></span>
+                    </div>
+                    <div class="element">
+                        <input type="password" placeholder="Password">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                    <button id="btn">Login</button>
+                </div>
+
+                <div class="page">
+                    <label>Sign up Form</label>
+                    <div class="element">
+                        <input type="text" placeholder="Email Address">
+                        <span class="fas fa-envelope"></span>
+                    </div>
+                    <div class="element">
+                        <input type="text" placeholder="Username">
+                        <span class="fas fa-user"></span>
+                    </div>
+                    <div class="element">
+                        <input type="password" placeholder="Password">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                    <button id="btn">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

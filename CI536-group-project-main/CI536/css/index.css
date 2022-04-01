@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 :root {
-  /* Root scope - All set-conditions can be used anywhere in the style-sheet */
+  /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
   --primary-color: rgb(27, 27, 27);
   --primary-color-light: rgb(54, 54, 54);
   --secondary-color: rgb(135, 101, 250);
@@ -21,8 +21,7 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-html,
-a {
+html, a {
   scroll-behavior: smooth;
   color: var(--text-primary);
   text-decoration: none;
