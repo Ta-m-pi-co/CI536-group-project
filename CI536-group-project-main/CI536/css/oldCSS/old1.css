@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+:root {
+  /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
+  --primary-color: rgb(27, 27, 27);
+  --primary-color-light: rgb(54, 54, 54);
+  --secondary-color: rgb(135, 101, 250);
+  font-size: 18px;
+  --text-primary: white;
+  --text-secondary: rgb(189, 189, 189);
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+/* Default styling for elements*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html, a {
+  scroll-behavior: smooth;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--primary-color);
+  font-size: 1.2rem;
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+.navbar ul {
+  position: relative;
+  top: 1.55rem;
+  left: 3rem;
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar a {
+  padding: 18px 60px;
+  color: var(--text-secondary);
+}
+.navbar a:hover {
+  color: var(--text-primary);
+  background-color: var(--primary-color-light);
+  border-bottom: 2px solid var(--secondary-color);
+}
