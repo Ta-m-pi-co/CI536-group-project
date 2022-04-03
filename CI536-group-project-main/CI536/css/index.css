@@ -18,8 +18,15 @@ body {
   min-height: 450px;
   height: 100vh;
 }
-nav,
+
+#logSign {
+}
+
 #navLinks {
+    
+}
+nav
+ {
   background: #171c24;
   display: flex;
   flex-wrap: wrap;
@@ -37,19 +44,20 @@ nav .logo {
 nav .nav-items {
   display: flex;
   flex: 1;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 40px;  
 }
-nav .nav-items li {
+nav .nav-items ul li {
   list-style: none;
   padding: 0 15px;
+  
 }
-nav .nav-items li a {
+nav .nav-items ul li a {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
 }
-nav .nav-items li a:hover {
+nav .nav-items ul li a:hover {
   color: #26d63b;
 }
 nav form {
@@ -103,12 +111,21 @@ nav .search-icon {
   display: none;
 }
 
+@media (min-width: 1145px) {
+    nav .nav-items ul{
+        display: flex;
+        flex: 1;
+        padding: 0 0 0 40px;  
+      }
+    
+}
 @media (max-width: 1245px) {
   nav {
     padding: 0 50px;
   }
 }
 @media (max-width: 1140px) {
+
   nav {
     padding: 0px;
   }
@@ -130,6 +147,7 @@ nav .search-icon {
     display: inline-block;
     transition: left 0.3s ease;
   }
+  
   nav .nav-items.active {
     left: 0px;
   }
@@ -137,7 +155,7 @@ nav .search-icon {
     line-height: 40px;
     margin: 30px 0;
   }
-  nav .nav-items li a {
+  nav .nav-items ul li a  {
     font-size: 20px;
   }
   nav form {
@@ -194,7 +212,7 @@ nav .search-icon {
     color: #26d63b;
   }
 }
-.nav-items #account {
+.nav-items {
   margin-bottom: 0%;
 }
 @media (max-width: 980px) {
