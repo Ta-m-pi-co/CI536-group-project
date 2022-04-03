@@ -11,10 +11,6 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-
-.nav-items #account {
-  margin-bottom: 0%;
-}
 body {
   background: #f2f2f2;
 
@@ -197,6 +193,9 @@ nav .search-icon {
     display: block;
     color: #26d63b;
   }
+}
+.nav-items #account {
+  margin-bottom: 0%;
 }
 @media (max-width: 980px) {
   nav .menu-icon,
