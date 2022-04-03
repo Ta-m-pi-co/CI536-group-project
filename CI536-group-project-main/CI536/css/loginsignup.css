@@ -25,11 +25,12 @@ body {
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-gradient));
 }
 
-label {
+h3 {
     display: block;
     margin-bottom: 5px;
     padding: 10px 15px;
     text-align: center;
+    font-size: 18px;
     letter-spacing: 2px;
     font-weight: bold;
     text-transform: uppercase;
@@ -147,6 +148,13 @@ input::placeholder {
     font-size: 18px;
 }
 
+.element .fa-eye, .element .fa-eye-slash {
+    cursor: pointer;
+    left: 25px;
+    right: 25px;
+    margin-left: 80%;
+} 
+
 .btn {
     padding: 5px 25px;
     background: linear-gradient(45deg, var(--accent-gradient), var(--secondary-color));
@@ -160,4 +168,14 @@ input::placeholder {
 
 .btn:active {
     transform: scale(1.01);
+}
+
+.element #email-msg {
+    position: absolute;
+    top: 2.75rem;
+    font-size: 14px;
+}
+
+#pg2 div.element:nth-child(3) {
+    transition: margin-top 250ms ease;
 }

@@ -1,4 +1,3 @@
-const switcheroo = document.querySelector(".switch");
 let current = 1;
     
 function tab2() {
@@ -15,3 +14,12 @@ function tab1() {
     document.querySelectorAll(".switch")[current - 1].classList.remove("active");
 }
 
+function togglePassword1(e) {
+    document.querySelector("#login-password").type = (document.querySelector("#login-password").type == "password") ? "text" : "password";
+    e.classList.value = (e.classList.value == "far fa-eye") ? "far fa-eye-slash" : "far fa-eye"; 
+}
+
+function togglePassword2(e) {
+    document.querySelector("#signup-password").type = (document.querySelector("#signup-password").type == "password") ? "text" : "password";
+    e.classList.value = (e.classList.value == "far fa-eye") ? "far fa-eye-slash" : "far fa-eye"; 
+}
