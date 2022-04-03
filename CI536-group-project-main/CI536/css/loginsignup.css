@@ -1,8 +1,19 @@
+:root {
+    /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
+    --primary-color: rgb(27, 27, 27);
+    --primary-color-light: rgb(54, 54, 54);
+    --secondary-color: rgb(135, 101, 250);
+    --accent-gradient: rgb(228, 0, 171);
+    --text-primary: white;
+    --text-secondary: rgb(189, 189, 189);
+    font-size: 18px;
+}
+
 * {
     margin: 0;
     padding: 0;
     outline: none;
-    font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     color: white;
 }
 
@@ -11,13 +22,28 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(-45deg, #00d5fc, #046af6);
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-gradient));
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    color: #d4cdcd;
+    font-size: 20px;
 }
 
 .container {
     position: relative;
     align-items: center;
-    padding: 20px 30px;
+    padding: 20px 30px 100px 30px;
     width: 400px;
     background: #0b0909;
     border-radius: 4px;
@@ -28,7 +54,7 @@ body {
     position: absolute;
     right: 30px;
     display: flex;
-    border-bottom: 1px solid #fe0066;
+    border-bottom: 1px solid rgb(255, 196, 0);
 }
 
 .switch.active {
@@ -40,7 +66,7 @@ body {
     content: '';
     width: 52px;
     height: 6px;
-    background: #fe0066;
+    background: rgb(255, 196, 0);
     border-radius: 60px 60px 0 0;
     bottom: 0;
     left: 12px;
@@ -54,10 +80,11 @@ body {
 
 .login {
     padding: 5px 12px;
-    background: linear-gradient(45deg, #00d5fc, #046af6);
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-gradient));
     margin-bottom: 10px;
     border-radius: 50px;
     text-align: right;
+    font-size: 16px;
     margin-left: 4px;
     letter-spacing: 1px;
     cursor: pointer;
@@ -69,6 +96,7 @@ body {
     margin-bottom: 10px;
     border-radius: 50px;
     text-align: right;
+    font-size: 16px;
     margin-left: 4px;
     letter-spacing: 1px;
     cursor: pointer;
@@ -96,17 +124,6 @@ body {
     width: 100%;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    padding: 10px 15px;
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 .element {
     position: relative;
 }
@@ -123,11 +140,6 @@ label {
     letter-spacing: 1px;
 }
 
-input::placeholder {
-    color: #d4cdcd;
-    font-size: 20px;
-}
-
 .element span {
     position: absolute;
     left: 30px;
@@ -135,9 +147,9 @@ input::placeholder {
     font-size: 18px;
 }
 
-#btn {
+.btn {
     padding: 5px 25px;
-    background: linear-gradient(45deg, #0326f9, #01fcf9);
+    background: linear-gradient(45deg, var(--accent-gradient), var(--secondary-color));
     border-radius: 50px;
     font-size: 25px;
     text-transform: uppercase;
@@ -146,6 +158,6 @@ input::placeholder {
     cursor: pointer;
 }
 
-#btn:active {
+.btn:active {
     transform: scale(1.01);
 }
