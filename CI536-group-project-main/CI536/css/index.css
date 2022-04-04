@@ -19,11 +19,11 @@ body {
   height: 100vh;
 }
 
-#logSign {
-}
-
-#navLinks {
-    
+#imgLogo {
+  display: block;
+  width: 70px;
+  height: 60px;
+  margin: auto;
 }
 nav
  {
