@@ -3,13 +3,11 @@ window.addEventListener('load', function(evt){
     var signupBtn = document.querySelector("#signup-btn")
     loginBtn = document.querySelector("#login-btn");
 
-    signupBtn.addEventListener('submit', function(evt){
-        evt.preventDefault()
+    signupBtn.addEventListener("click", function(evt){
         //check fields are valid and submit
     })
 
-    loginBtn.addEventListener('submit', function(evt){
-        evt.preventDefault()
+    loginBtn.addEventListener("click", function(evt){
         
         var mysql = require('mysql');
 
