@@ -1,36 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By Code4Education -->
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/utilities.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
-    <title>Laptopia</title>
+  <meta charset="utf-8">
+  <title>Laptopia | Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../javascript/navbar.js"></script>
+  <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-     <!-- Navigation -->
-     <nav>
-        <div class="navbar">
-            <div class="search-box">
-                <span class="fa fa-search"></span>
-                <input id="search-bar" type="search" placeholder="Looking for something?">
-            </div>
-            <div class="container flex">
-                <img id="navbar-logo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo"></img>
-                
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Sign up</a></li>
-                    </ul>
-                </nav>
-            </div> 
+    <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars"></i>
         </div>
-    </nav>
+        <div class="logo"><a class="logo" href="index.html"><img id="imgLogo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo"></img></a></div>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="loginsignup.html" id="logSign"  aria-hidden="true">login/sign up</a></li>
+          </ul>
+        </div>
+        
+        <div class="search-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="cancel-icon">
+          <i class="fa fa-times"></i>
+        </div>
+        <form action="#">
+          <input type="search" class="search-data" placeholder="Search" required>
+          <button type="submit" class="fa fa-search"></button>
+        </form>
+      </nav>
+      <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h3>Price</h3>
+                <!--py means padding top and bottom, -->
+                <div class="py-2 border-bottom ml-3"> 
+                
+                    <form>
+                            <div class="form-group"> <input type="checkbox" id="price1"> <label for="price1">£400</label> </div>
+                            <div class="form-group"> <input type="checkbox" id="price2"> <label for="price2">£400-£600</label> </div>
+                            <div class="form-group"> <input type="checkbox" id="price3"> <label for="price3">£600-£800</label> </div>
+                            <div class="form-group"> <input type="checkbox" id="price4"> <label for="price4">£800+</label> </div>
+                     </form>
+            </div>
+            <div class="py-2 border-bottom ml-3"> >
+                <h3>Screen Size</h3>
+                <form>
+                    <div class="form-group"> <input type="checkbox" id="screensize1"> <label for="screensize1">14"</label> </div>
+                    <div class="form-group"> <input type="checkbox" id="screensize2"> <label for="screensize2">15"</label> </div>
+                    <div class="form-group"> <input type="checkbox" id="screensize3"> <label for="screensize3">16"</label> </div>
+                    <div class="form-group"> <input type="checkbox" id="screensize4"> <label for="screensize4">17"</label> </div>
+                </form>
+            </div>
+            <div class="py-2 border-bottom ml-3"> >
+                <h3>Brand</h3>
+                <form>
+                    <div class="form-group"> <input type="checkbox" id="HP"> <label for="HP">HP</label> </div>
+                    <div class="form-group"> <input type="checkbox" id="Lenovo"> <label for="Lenovo">Lenovo</label> </div>
+                    <div class="form-group"> <input type="checkbox" id="Dell"> <label for="Dell">Dell</label> </div>
+                    <div class="form-group"> <input type="checkbox" id="Apple"> <label for="Apple">Apple</label> </div>
+                </form>
+            </div>
+            <!--Product section-->
+            <div class="cols-sm-9 ">
+              <div class="card">
+                <div class="col-sm-4 mt-1">
+                    <img class="card-img-top"src="Laptop.png" alt="laptop image filler">
+                    <div class="col-md-6 mt-1">
+                        <div class="card-header">HP Pavilion 14-dv0626sa 14" Laptop - Intel® Core™ i3, 256 GB SSD, Silver</div>
+                        <div class="card-body d-flex flex-row">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                        </div>
+                        <Ul>
+                          <li>
+                            info
+                          </li>
+                          <li>
+                            info
+                          </li>
+                          <li>
+                            info
+                          </li>
+                        </Ul>
+                    </div>
+
+                </div>
+
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

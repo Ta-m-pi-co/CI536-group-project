@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
-
+:root {
+  /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
+  --primary-color: rgb(27, 27, 27);
+  --primary-color-light: rgb(54, 54, 54);
+  --secondary-color: rgb(135, 101, 250);
+  --accent-gradient: rgb(228, 0, 171);
+  --text-primary: white;
+  --text-secondary: rgb(189, 189, 189);
+  font-size: 18px;
+}
 /* Default styling for elements*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 * {
@@ -11,15 +20,21 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-body {
-  background: #f2f2f2;
 
+/*body*/
+body {
+  background: rgb(15, 14, 26);
   background-size: cover;
   background-position: center;
   min-height: 450px;
   height: 100vh;
 }
-nav {
+
+
+/*navigation bar*/
+/*primary nav element*/
+nav
+ {
   background: #171c24;
   display: flex;
   flex-wrap: wrap;
@@ -28,39 +43,49 @@ nav {
   height: 70px;
   padding: 0 100px;
 }
-nav .logo {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -1px;
+
+/*Main Logo*/
+#imgLogo {
+  display: block;
+  width: 70px;
+  height: 60px;
+  margin: auto;
 }
+
+/*Nav Links*/
 nav .nav-items {
   display: flex;
   flex: 1;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 40px;  
 }
-nav .nav-items li {
+
+nav .nav-items ul li {
   list-style: none;
   padding: 0 15px;
+  
 }
-nav .nav-items li a {
+nav .nav-items ul li a {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
 }
-nav .nav-items li a:hover {
-  color: #26d63b;
+nav .nav-items ul li a:hover {
+  color: rgb(135, 101, 250);
 }
+
+/*Search bar*/
 nav form {
   display: flex;
   height: 40px;
   padding: 2px;
-  background: #1e232b;
+  background: #171c24;
   min-width: 18% !important;
   border: 1px solid rgba(155, 155, 155, 0.2);
   border-radius: 36px;
 }
+
+/*search Bar textBox*/
 nav form .search-data {
   width: 100%;
   height: 100%;
@@ -70,12 +95,15 @@ nav form .search-data {
   border: none;
   font-weight: 500;
   background: none;
+  
 }
+
+/*search bar button*/
 nav form button {
   padding: 0 15px;
   color: #fff;
   font-size: 17px;
-  background: #26d63b;
+  background: rgb(135, 101, 250);
   border: none;
   border-radius: 2px;
   border-top-right-radius: 12px;
@@ -83,9 +111,12 @@ nav form button {
   cursor: pointer;
   transition: 0.2s all;
 }
+
 nav form button:hover {
-  background: #2b9638;
+  background: rgb(75, 44, 177);
 }
+
+/*responsive navigation elements. these are hidden and displayed based on screensize*/
 nav .menu-icon,
 nav .cancel-icon,
 nav .search-icon {
@@ -102,13 +133,25 @@ nav .cancel-icon,
 nav .search-icon {
   display: none;
 }
+/*this is for large screens to fix the ul and make it display properly*/
+@media (min-width: 1145px) {
+    nav .nav-items ul{
+        display: flex;
+        flex: 1;
+        padding: 0 0 0 40px;  
+      }
+    
+}
 
+/*this is that as the screen size changes the padding changes aswell*/
 @media (max-width: 1245px) {
   nav {
     padding: 0 50px;
   }
 }
+/*Medium Screens*/
 @media (max-width: 1140px) {
+
   nav {
     padding: 0px;
   }
@@ -117,6 +160,8 @@ nav .search-icon {
     text-align: center;
     font-size: 22px;
   }
+
+  /*for hamburger navigation(hide and display navbar)*/
   nav .nav-items {
     position: fixed;
     z-index: 99;
@@ -130,6 +175,7 @@ nav .search-icon {
     display: inline-block;
     transition: left 0.3s ease;
   }
+  
   nav .nav-items.active {
     left: 0px;
   }
@@ -137,7 +183,7 @@ nav .search-icon {
     line-height: 40px;
     margin: 30px 0;
   }
-  nav .nav-items li a {
+  nav .nav-items ul li a  {
     font-size: 20px;
   }
   nav form {
@@ -170,7 +216,7 @@ nav .search-icon {
     content: "";
     height: 60px;
     padding: 2px;
-    background: #474c55;
+    background: #171c24;
     border-radius: 2px;
     min-width: calc(100% + 20px);
     z-index: -2;
@@ -194,9 +240,11 @@ nav .search-icon {
     color: #26d63b;
   }
 }
-.nav-items #account {
+.nav-items {
   margin-bottom: 0%;
 }
+
+/*small screens*/
 @media (max-width: 980px) {
   nav .menu-icon,
   nav .cancel-icon,
@@ -207,6 +255,7 @@ nav .search-icon {
     right: 30px;
   }
 }
+/*very small screens*/
 @media (max-width: 350px) {
   nav .menu-icon,
   nav .cancel-icon,
