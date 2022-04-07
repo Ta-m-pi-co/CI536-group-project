@@ -1,3 +1,4 @@
+@import url("normalize.css");
 :root {
     /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
     --primary-color: rgb(27, 27, 27);
@@ -183,4 +184,21 @@ input::placeholder {
 
 #pg2 div.element:nth-child(3) {
     transition: margin-top 250ms ease;
+}
+
+.element input.success {
+    border: 1px solid #00ff00
+}
+
+.element input.error {
+    border: 1px solid #ff0000
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--primary-color-light) inset !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    box-shadow: 0 0 0 30px var(--primary-color-light) inset !important;
 }
