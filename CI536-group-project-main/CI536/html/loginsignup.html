@@ -9,11 +9,11 @@
     <title>Laptopia | Login & Sign up</title>
 </head>
 <body>
-    
+    <img id="logo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo" width="100px">
     <div class="container">
         <div class="switch">
-            <div class="login" onclick="tab1();">Login</div>
-            <div class="signup" onclick="tab2();">Sign Up</div>
+            <div class="login" onclick="scrollToLogin();">Login</div>
+            <div class="signup" onclick="scrollToSignUp();">Sign Up</div>
         </div>
 
         <div class="outer">
@@ -27,7 +27,7 @@
                     <div class="element">
                         <input id="login-password" type="password" placeholder="Password">
                         <span class="fas fa-lock"></span>
-                        <span class="far fa-eye-slash" onclick="togglePassword1(this)"></span>
+                        <span class="far fa-eye-slash" onclick="toggleLoginPwd(this)"></span>
                     </div>
                     <button id="login-btn" class="btn">Login</button>
                 </div>
@@ -46,7 +46,7 @@
                     <div class="element">
                         <input id="signup-password" type="password" placeholder="Create Password">
                         <span class="fas fa-lock"></span>
-                        <span class="far fa-eye-slash" onclick="togglePassword2(this)"></span>
+                        <span class="far fa-eye-slash" onclick="toggleSignUpPwd(this)"></span>
                     </div>
                     <button id="signup-btn" class="btn">Sign up</button>
                 </div>

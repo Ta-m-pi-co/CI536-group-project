@@ -22,6 +22,7 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-gradient));
 }
 
@@ -41,12 +42,17 @@ input::placeholder {
     font-size: 20px;
 }
 
+#logo {
+    margin-bottom: -0.8rem;
+    z-index: 1;
+}
+
 .container {
     position: relative;
-    align-items: center;
-    padding: 20px 30px 100px 30px;
     width: 400px;
     background: #0b0909;
+    padding: 20px 30px 100px 30px;
+    align-items: center;
     border-radius: 4px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
@@ -143,16 +149,15 @@ input::placeholder {
 
 .element span {
     position: absolute;
-    left: 30px;
+    left: 7.75%;
     top: 12px;
-    font-size: 18px;
+    text-align: left;
 }
 
 .element .fa-eye, .element .fa-eye-slash {
     cursor: pointer;
-    left: 25px;
-    right: 25px;
-    margin-left: 80%;
+    left: 87%;
+    text-align: right;
 } 
 
 .btn {

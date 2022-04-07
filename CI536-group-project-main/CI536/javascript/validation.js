@@ -1,9 +1,4 @@
-function validation() {
-
-}
-
-document.querySelector("#email").addEventListener("keyup", () => 
-{
+document.querySelector("#email").addEventListener("keyup", () => {
     const form = document.getElementById("form");
     const email = document.getElementById("email").value;
     const emailMsg = document.getElementById("email-msg");
