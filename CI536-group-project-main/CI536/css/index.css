@@ -134,6 +134,37 @@ nav .cancel-icon,
 nav .search-icon {
   display: none;
 }
+
+/*product.html info */
+.sidenav {
+  height:100%;
+}
+
+.row.content {
+  height: 1500px;
+}
+
+.card-img-top{
+width: 200px;;
+height:auto;
+}
+
+.card-header{
+  color:#fff;
+  font-style: bold;
+  font-size: 18px;
+}
+
+label{
+  color:white;
+}
+
+h3{
+  color:white;
+}
+.border-bottom .border-white{
+  color:white;
+}
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
     nav .nav-items ul{

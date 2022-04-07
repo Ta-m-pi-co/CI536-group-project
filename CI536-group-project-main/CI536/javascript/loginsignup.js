@@ -1,34 +1,38 @@
 window.addEventListener('load', function(evt){
 
-    var signupBtn = document.querySelector("#signup-btn")
-    loginBtn = document.querySelector("#login-btn");
+    var signupBtn = document.querySelector('#signup-btn'),
+    loginBtn = document.querySelector('#login-btn'),
+    loginUsername = document.querySelector('#login-username');
+    loginPassword = document.querySelector('#login-password');
+    email = document.querySelector('#email');
+    signupUsername = document.querySelector('#signup-username');
+    signupPassword = document.querySelector('#signup-password');
 
-    signupBtn.addEventListener("click", function(evt){
-        //check fields are valid and submit
+    signupBtn.addEventListener('click', function(evt){
+        evt.preventDefault();
+        fieldsOkSign = true;
+        if(signupUsername.value.trim().length === 0) {
+            fieldsOkSign = false;
+        } else if (signupPassword.value.trim().length === 0) {
+            fieldsOkSign = false;
+        } else if (email.value.trim().length === 0) {
+            fieldsOkSign = false;
+        }
+        if (fieldsOkSign === true) {
+            window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?susername=' + signupUsername.value.trim() + '&spassword=' +  signupPassword.value.trim()+ '&email=' +  email.value.trim();
+        }
     })
 
-    loginBtn.addEventListener("click", function(evt){
-        
-        var mysql = require('mysql');
-
-        var con = mysql.createConnection({
-        host: "localhost",
-        user: "yourusername",
-        password: "yourpassword",
-        database: "mydb"
-        });
-
-        var usernameT = document.querySelector("#login-username").value.trim();
-        var passwordT = document.querySelector("#login-password").value.trim();
-
-        con.connect(function(err) {
-            if (err) throw err;
-            con.query("SELECT * FROM Users WHERE Username = '" + usernameT + "' AND Password = '" + passwordT + "'", function (err, result) {
-              if (err) throw err;
-              console.log(result);
-            });
-        });
-
-        //check fields are valid and submit
+    loginBtn.addEventListener('click', function(evt){
+        evt.preventDefault();
+        fieldsOk = true;
+        if(loginUsername.value.trim().length === 0) {
+        fieldsOk = false;
+        } else if (loginPassword.value.trim().length === 0) {
+            fieldsOk = false;
+        }
+        if (fieldsOk === true) {
+        window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?lusername=' + loginUsername.value.trim() + '&lpassword=' +  loginPassword.value.trim();
+        }
     })
 })
