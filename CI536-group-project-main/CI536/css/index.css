@@ -133,6 +133,14 @@ nav .cancel-icon,
 nav .search-icon {
   display: none;
 }
+
+.sidenav {
+  background-color: aqua;
+}
+
+.row.content {
+  height: 1500px
+}
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
     nav .nav-items ul{
