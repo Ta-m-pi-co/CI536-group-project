@@ -7,36 +7,31 @@ window.addEventListener('load', function(evt){
     email = document.querySelector('#email');
     signupUsername = document.querySelector('#signup-username');
     signupPassword = document.querySelector('#signup-password');
-    fieldsOk = true;
-    fieldsOkSign = true;
-    emailValidate = email.match(/\S+@\S+.\S+/);
-
-    if(loginUsername.length === 0) {
-        fieldsOk = false;
-    } else if (loginPassword.length === 0) {
-        fieldsOk = false;
-    }
-
-    if(loginUsername.length === 0) {
-        fieldsOkSign = false;
-    } else if (loginPassword.length === 0) {
-        fieldsOkSign = false;
-    } else if (email.length === 0) {
-        fieldsOkSign = false;
-    } else if (emailValidate === null) {
-        fieldsOkSign = false;
-    }
 
     signupBtn.addEventListener('click', function(evt){
-    evt.preventDefault();
-        if (fieldsOk === true) {
+        evt.preventDefault();
+        fieldsOkSign = true;
+        if(signupUsername.value.trim().length === 0) {
+            fieldsOkSign = false;
+        } else if (signupPassword.value.trim().length === 0) {
+            fieldsOkSign = false;
+        } else if (email.value.trim().length === 0) {
+            fieldsOkSign = false;
+        }
+        if (fieldsOkSign === true) {
             window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?susername=' + signupUsername.value.trim() + '&spassword=' +  signupPassword.value.trim()+ '&email=' +  email.value.trim();
         }
     })
 
     loginBtn.addEventListener('click', function(evt){
-    evt.preventDefault();
-        if (fieldsOkSign === true) {
+        evt.preventDefault();
+        fieldsOk = true;
+        if(loginUsername.value.trim().length === 0) {
+        fieldsOk = false;
+        } else if (loginPassword.value.trim().length === 0) {
+            fieldsOk = false;
+        }
+        if (fieldsOk === true) {
         window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?lusername=' + loginUsername.value.trim() + '&lpassword=' +  loginPassword.value.trim();
         }
     })
