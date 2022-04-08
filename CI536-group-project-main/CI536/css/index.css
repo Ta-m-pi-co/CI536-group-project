@@ -137,6 +137,8 @@ nav .search-icon {
 /*product.html info */
 .sidenav {
   height:100%;
+  border-color: #fff;
+  padding-left:20px;
 }
 
 .row.content {
@@ -152,6 +154,7 @@ height:auto;
   color:#fff;
   font-style: bold;
   font-size: 18px;
+  padding: 10px;
 }
 
 label{
@@ -161,8 +164,31 @@ label{
 h3{
   color:white;
 }
-.border-bottom .border-white{
+.border .border-white{
   color:white;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+.card-body{
+  color: #fff;
+}
+
+ul {
+  padding-top: 15px;
+}
+
+li{
+  color:#fff;
+  position:relative;
+}
+
+.card-text ul li{
+  color: #fff;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position:relative;
+  left:80px;
 }
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
