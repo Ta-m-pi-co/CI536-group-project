@@ -1,3 +1,5 @@
+@import url("normalize.css");
+
 /* This css file contains site-utilities which will define the styling theme across the site */
 .container {
     margin: 0 auto;         /* 0 on top & bottom, auto on left & right */
