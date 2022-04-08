@@ -1,6 +1,8 @@
 <?php
     
-	$html = '';
+	$errorL = '';
+	$errorS = '';
+	
 	$conn = mysqli_connect('localhost', 'cw1019_admin', '0B+F4pp_~u{p', 'cw1019_laptopia_database');
 	
 	if(isset($_GET['lusername'])&&isset($_GET['lpassword'])){
@@ -8,7 +10,7 @@
     	$lPassword = $_GET['lpassword'];
     	
     	if (!$conn) {
-          $html = "Connection failed: " . $conn->connect_error;
+          http_response_code(500);
         } else {
             $lUsername = $conn->real_escape_string($lUsername);
             $lPassword = $conn->real_escape_string($lPassword);
@@ -19,10 +21,15 @@
     
             if ($result->num_rows > 0) {
               while($row = $result->fetch_assoc()) {
-                $html = $row["Username"] . " Logged in";
+                $errorL = $row["Username"] . " Logged in";
+                if(isset($_COOKIE['username'])){
+                    setcookie('username', time()-3600, "cw1019.brighton.domains");
+                }
+                setcookie('username', $_GET['lusername'], time()+3600, "cw1019.brighton.domains");
+                header("Location: https://cw1019.brighton.domains/Laptopia/html/");
               }
             } else {
-              $html = "Wrong Username or Password";
+              $errorL = "Wrong Username or Password";
             }
             $conn->close();
         }
@@ -35,7 +42,7 @@
     	
     	if (!$conn) {
     	    
-          $html = "Connection failed: " . $conn->connect_error;
+          http_response_code(500);
 
         }else{
             $userValid = true;
@@ -45,19 +52,19 @@
             
             if (strlen($sUsername)<=3 or strlen($sUsername)>=33 or strlen($sPassword)<=3 or strlen($sPassword)>=33 or strlen($email)<=3 or strlen($email)>=33){
                 $userValid = false;
-                $html = "1 or more Inputs are Invalid";
+                $errorS = "1 or more Inputs are Invalid";
             }else{
                 $sql = "SELECT * FROM Users WHERE Username = '$sUsername'";
                 $result = $conn->query($sql);
                 if ($result->num_rows != 0){
                     $userValid = false;
-                    $html = "Username already exists";
+                    $errorS = "Username already exists";
                 }
                 $sql = "SELECT * FROM Users WHERE Email = '$email'";
                 $result = $conn->query($sql);
                 if ($result->num_rows != 0){
                     $userValid = false;
-                    $html = "Email already in use";
+                    $errorS = "Email already in use";
                 }
             }
             if ($userValid == true){
@@ -68,8 +75,13 @@
             	$success = $conn->query($sql);
             	if($success){
             		$id = $conn->insert_id;
-            		$html = "Thanks, created record with id $id";
-            	}
+            		$errorS = "Thanks, created record with id $id";
+            		if(isset($_COOKIE['username'])){
+                        setcookie('username', time()-3600, "cw1019.brighton.domains");
+                    }
+                    setcookie('username', $_GET['susername'], time()+3600, "cw1019.brighton.domains");
+                    header("Location: https://cw1019.brighton.domains/Laptopia/html/");
+                	}
             }
         	$conn->close();
         }
@@ -79,7 +91,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../javascript/loginsignup.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://kit.fontawesome.com/b94f75224e.js" crossorigin="anonymous"></script> 
@@ -99,9 +110,9 @@
             <form id="form">
                 <div id="pg1" class="page">
                     <h3>Login to Laptopia</h3>
-                    <label id="loginsignup-error" class="errorMessage"><?php echo $sql . $html ?></label>
+                    <label id="login-error" class="errorMessage"><?php echo $errorL ?></label>
                     <div class="element">
-                        <input id="login-username" type="text" placeholder="Username">
+                        <input id="login-username" type="text" placeholder="Username" value="<?php echo $lUsername ?>">
                         <span class="fas fa-user"></span>
                     </div>
                     <div class="element">
@@ -114,13 +125,14 @@
 
                 <div id="pg2" class="page">
                     <h3>Sign up to Laptopia</h3>
+                    <label id="signup-error" class="errorMessage"><?php echo $errorS ?></label>
                     <div class="element">
-                        <input id="email" type="email" placeholder="Enter Email Address" autocomplete="off">
+                        <input id="email" type="email" placeholder="Enter Email Address" autocomplete="off" value="<?php echo $email ?>">
                         <span class="fas fa-envelope"></span>
                         <span id="email-msg"></span>
                     </div>
                     <div class="element">
-                        <input id="signup-username" type="text" placeholder="Create Username">
+                        <input id="signup-username" type="text" placeholder="Create Username" value="<?php echo $sUsername ?>">
                         <span class="fas fa-user"></span>
                     </div>
                     <div class="element">
@@ -133,7 +145,7 @@
             </form>
         </div>
     </div>
-    <script src="../javascript/index.js"></script>
+    <script src="../javascript/loginsignup.js"></script>
     <script src="../javascript/validation.js"></script>
 </body>
 </html>

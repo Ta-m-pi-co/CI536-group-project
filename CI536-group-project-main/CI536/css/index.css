@@ -152,6 +152,9 @@ nav .search-icon {
 .row.content {
   height: 1500px;
 }
+.row{
+  border:#610AD1;
+}
 
 .card-img-top{
 width: 200px;;
@@ -181,9 +184,28 @@ h3{
 .card-body{
   color: #fff;
 }
-.btn{
+ .btn{
 display:block;
-width:40px;
+width:130px;
+padding:5px;
+color:#fff;
+  
+}
+
+
+#btn1{
+  border-color:#610AD1;
+  padding:5px;
+}
+
+#btn2{
+  background-color:#610AD1;
+  padding: 5px;
+  border:none;
+}
+
+h4{
+  color:#fff;
 }
 
 ul {
