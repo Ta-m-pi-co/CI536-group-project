@@ -183,6 +183,11 @@ input {
     border: none;
     margin-top: 5px;
     cursor: pointer;
+    -webkit-transition: background-color 2s ease-out;  
+    transition: background-color 2s ease-out;        
+} .btn:hover, .btn:active {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-gradient));
+    transform: scale(1.05);
 }
 
 .btn:active {
