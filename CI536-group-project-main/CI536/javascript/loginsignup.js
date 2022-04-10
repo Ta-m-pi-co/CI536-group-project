@@ -1,24 +1,26 @@
 window.addEventListener('load', function(evt){
 
-    const signupBtn = document.querySelector('#signup-btn');
-    const loginBtn = document.querySelector('#login-btn');
-    const loginUsername = document.querySelector('#login-username');
-    const loginPassword = document.querySelector('#login-password');
-    const email = document.querySelector('#email');
-    const signupUsername = document.querySelector('#signup-username');
-    const signupPassword = document.querySelector('#signup-password');
-    const signupErrorMessage = document.querySelector('#signup-error');
+    var signupBtn = document.querySelector('#signup-btn'),
+    loginBtn = document.querySelector('#login-btn'),
+    loginUsername = document.querySelector('#login-username');
+    loginPassword = document.querySelector('#login-password');
+    email = document.querySelector('#email');
+    signupUsername = document.querySelector('#signup-username');
+    signupPassword = document.querySelector('#signup-password');
+    signupErrorMessage = document.querySelector('#signup-error');
     
     if(signupErrorMessage.textContent.length !== 0){
         scrollToSignUp();
     }
     
-    signupBtn.addEventListener('click', function() {
+    signupBtn.addEventListener('click', function(evt){
         evt.preventDefault();
-        let fieldsOkSign = true;
-        if(signupUsername.value.trim().length === 0 || 
-           signupPassword.value.trim().length === 0 || 
-           email.value.trim().length === 0) {
+        fieldsOkSign = true;
+        if(signupUsername.value.trim().length === 0) {
+            fieldsOkSign = false;
+        } else if (signupPassword.value.trim().length === 0) {
+            fieldsOkSign = false;
+        } else if (email.value.trim().length === 0) {
             fieldsOkSign = false;
         }
         if (fieldsOkSign === true) {
@@ -26,10 +28,12 @@ window.addEventListener('load', function(evt){
         }
     })
 
-    loginBtn.addEventListener('click', function(){
+    loginBtn.addEventListener('click', function(evt){
         evt.preventDefault();
-        let fieldsOk = true;
-        if(loginUsername.value.trim().length === 0 || loginPassword.value.trim().length === 0) {
+        fieldsOk = true;
+        if(loginUsername.value.trim().length === 0) {
+        fieldsOk = false;
+        } else if (loginPassword.value.trim().length === 0) {
             fieldsOk = false;
         }
         if (fieldsOk === true) {
