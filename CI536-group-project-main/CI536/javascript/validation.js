@@ -7,7 +7,8 @@ document.querySelector("#email").addEventListener("keyup", () => {
     
     if (email == "") {
         emailMsg.innerHTML = "";
-        createUsername.style.marginTop = "0";
+        createUsername.style.marginBottom = "0";
+        document.getElementById("email").classList.remove("success", "error");
         return;
     } 
 
@@ -20,6 +21,8 @@ document.querySelector("#email").addEventListener("keyup", () => {
         email.classList.remove("error");
         emailMsg.innerHTML = "Your email address is valid :)";
         emailMsg.style.color = "#00ff00";
+        document.getElementById("email").classList.add("success");
+        document.getElementById("email").classList.remove("error");
         return;
     }
 
@@ -29,6 +32,7 @@ document.querySelector("#email").addEventListener("keyup", () => {
     email.classList.remove("success");
     emailMsg.innerHTML = "Please enter a valid email address";
     emailMsg.style.color = "#ff0000";
+    document.getElementById("email").classList.add("error");
 })
 
 document.querySelector("#login-username").addEventListener("keyup", () => {
