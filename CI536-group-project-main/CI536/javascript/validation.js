@@ -7,22 +7,26 @@ document.querySelector("#email").addEventListener("keyup", () => {
     
     if (email == "") {
         emailMsg.innerHTML = "";
-        createUsername.style.marginBottom = "0";
+        createUsername.style.marginTop = "0";
         return;
     } 
 
-    createUsername.style.marginBottom = "0.8rem";
+    createUsername.style.marginTop = "0.8rem";
 
     if (email.match(pattern)) {
         form.classList.add("valid");
         form.classList.remove("invalid");
+        email.classList.add("success");
+        email.classList.remove("error");
         emailMsg.innerHTML = "Your email address is valid :)";
         emailMsg.style.color = "#00ff00";
         return;
     }
 
-    form.classList.remove("valid");
     form.classList.add("invalid");
+    form.classList.remove("valid");
+    email.classList.add("error");
+    email.classList.remove("success");
     emailMsg.innerHTML = "Please enter a valid email address";
     emailMsg.style.color = "#ff0000";
 })
