@@ -2,17 +2,17 @@ document.querySelector("#email").addEventListener("keyup", () => {
     const form = document.getElementById("form");
     const email = document.getElementById("email").value;
     const emailMsg = document.getElementById("email-msg");
-    const createUsername = document.querySelector("#pg2 div.element:nth-child(3)");
+    const emailDiv = document.querySelector("#pg2 div.element:nth-child(3)");
     const pattern = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     
     if (email == "") {
         emailMsg.innerHTML = "";
-        createUsername.style.marginBottom = "0";
+        emailDiv.style.marginBottom = "0";
         document.getElementById("email").classList.remove("success", "error");
         return;
     } 
 
-    createUsername.style.marginBottom = "0.8rem";
+    emailDiv.style.marginBottom = "0.8rem";
 
     if (email.match(pattern)) {
         form.classList.add("valid");
