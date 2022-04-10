@@ -22,6 +22,9 @@
   font-family: "Montserrat", sans-serif;
 }
 
+p {
+  color: white;
+}
 /*body*/
 body {
   background: rgb(15, 14, 26);
@@ -29,8 +32,11 @@ body {
   background-position: center;
   min-height: 450px;
   height: 100vh;
+  
 }
-
+#home-wrap {
+  padding-top: 5rem;
+}
 
 /*navigation bar*/
 /*primary nav element*/
@@ -96,6 +102,7 @@ nav form .search-data {
   border: none;
   font-weight: 500;
   background: none;
+  z-index: 1;
   
 }
 
@@ -138,10 +145,15 @@ nav .search-icon {
 /*product.html info */
 .sidenav {
   height:100%;
+  border-color: #fff;
+  padding-left:20px;
 }
 
 .row.content {
   height: 1500px;
+}
+.row{
+  border:#610AD1;
 }
 
 .card-img-top{
@@ -153,6 +165,7 @@ height:auto;
   color:#fff;
   font-style: bold;
   font-size: 18px;
+  padding: 10px;
 }
 
 label{
@@ -162,8 +175,54 @@ label{
 h3{
   color:white;
 }
-.border-bottom .border-white{
+.border .border-white{
   color:white;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+.card-body{
+  color: #fff;
+}
+ .btn{
+display:block;
+width:130px;
+padding:5px;
+color:#fff;
+  
+}
+
+
+#btn1{
+  border-color:#610AD1;
+  padding:5px;
+}
+
+#btn2{
+  background-color:#610AD1;
+  padding: 5px;
+  border:none;
+}
+
+h4{
+  color:#fff;
+}
+
+ul {
+  padding-top: 15px;
+}
+
+li{
+  color:#fff;
+  position:relative;
+}
+
+.card-text ul li{
+  color: #fff;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position:relative;
+  left:80px;
 }
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
@@ -278,6 +337,15 @@ h3{
 
 /*small screens*/
 @media (max-width: 980px) {
+  .navbar {
+    position: fixed;
+    width: 100vw;
+    
+  }
+ .navbar .nav-items {
+   
+ }
+ 
   nav .menu-icon,
   nav .cancel-icon,
   nav .search-icon {

@@ -63,7 +63,7 @@ input {
 
 .container {
     position: relative;
-    width: 400px;
+    width: fit-content;
     background: #0b0909;
     padding: 20px 30px 100px 30px;
     align-items: center;

@@ -41,10 +41,10 @@
       </nav>
       <div class="container-fluid">
         <div class="row content">
-            <div class="col-sm-3 sidenav">
+            <div class="col-xs-1 col-sm-2 col-md-3 sidenav">
                 <h3>Price</h3>
                 <!--py means padding top and bottom, -->
-                <div class="border-bottom border-white"> 
+                <div class="border border-bottom border-white"> 
                 
                     <form>
                             <div class="form-group"> <input type="checkbox" id="price1"> <label for="price1">£400</label> </div>
@@ -53,7 +53,7 @@
                             <div class="form-group"> <input type="checkbox" id="price4"> <label for="price4">£800+</label> </div>
                      </form>
             </div>
-            <div class="border-bottom border-white"> >
+            <div class="border border-bottom border-white"> >
                 <h3>Screen Size</h3>
                 <form>
                     <div class="form-group"> <input type="checkbox" id="screensize1"> <label for="screensize1">14"</label> </div>
@@ -62,7 +62,7 @@
                     <div class="form-group"> <input type="checkbox" id="screensize4"> <label for="screensize4">17"</label> </div>
                 </form>
             </div>
-            <div class="py-2 border-bottom ml-3"> >
+            <div class="border border-bottom border-white"> >
                 <h3>Brand</h3>
                 <form>
                     <div class="form-group"> <input type="checkbox" id="HP"> <label for="HP">HP</label> </div>
@@ -73,29 +73,43 @@
             </div>
             </div>
             <!--Product section-->
-            <div class="col-sm-9">
+            <div class="container col-xs-11 col-sm-10  col-md-9">
+              <div class="row">
                 <div class="card">
                   <div class="card-header">HP Pavilion 14-dv0626sa 14" Laptop - Intel® Core™ i3, 256 GB SSD, Silver</div>
-                  <div class="col-sm-4 mt-1">
+                  
+                  <div class="col-sm-3">
                     <img class="card-img-top"src="../ImgSrc/laptopFiller.png" alt="laptop image filler">
                   </div>
-                    <div class="col-md-5 mt-1">
+                    <div class="col-sm-4">
                       
-                        <div class="card-body d-flex flex-row">
-                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                        <div class="card-body">
+                            <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
                         </div>
-                        <Ul>
+                        <ul class="card-text">
                           <li>
-                            info
+                            Windows 11 Home
                           </li>
                           <li>
-                            info
+                            Intel® Core™ i3-1115G4 (up to 4.1 GHz with Intel® Turbo Boost Technology, 6 MB L3 cache, 2 cores, 4 threads)
                           </li>
                           <li>
-                            info
+                            8 GB DDR4-3200 MHz RAM (1 x 8 GB)
                           </li>
-                        </Ul>
-                    </div>
+                          <li>
+                            256 GB PCIe® NVMe™ M.2 SSD
+                          </li>
+                          <li>
+                            35.6 cm (14") diagonal, FHD (1920 x 1080), touch, IPS, micro-edge, anti-glare, 250 nits, 45% NTSC
+                          </li>
+                        </ul>
+                      </div>
+                        <div class="col-sm-3">
+                          <h4 class="price">Price</h4>
+                        <a href="#" class="btn" id="btn1">View Product</a>
+                        <a href="#" class="btn btn-info" id="btn2">Add to Basket</a>
+                        </div>
+                    
                   
                 </div>
                </div>

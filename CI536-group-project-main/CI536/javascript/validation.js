@@ -7,20 +7,17 @@ document.querySelector("#email").addEventListener("keyup", () => {
     
     if (email == "") {
         emailMsg.innerHTML = "";
-        createUsername.style.marginTop = "0";
-        document.getElementById("email").classList.remove("success", "error");
+        createUsername.style.marginBottom = "0";
         return;
     } 
 
-    createUsername.style.marginTop = "0.8rem";
+    createUsername.style.marginBottom = "0.8rem";
 
     if (email.match(pattern)) {
         form.classList.add("valid");
         form.classList.remove("invalid");
-        emailMsg.innerHTML = "Your email address is valid!";
+        emailMsg.innerHTML = "Your email address is valid :)";
         emailMsg.style.color = "#00ff00";
-        document.getElementById("email").classList.add("success");
-        document.getElementById("email").classList.remove("error");
         return;
     }
 
@@ -28,5 +25,8 @@ document.querySelector("#email").addEventListener("keyup", () => {
     form.classList.add("invalid");
     emailMsg.innerHTML = "Please enter a valid email address";
     emailMsg.style.color = "#ff0000";
-    document.getElementById("email").classList.add("error");
+})
+
+document.querySelector("#login-username").addEventListener("keyup", () => {
+    //validation not less than 4 or more than 32
 })
