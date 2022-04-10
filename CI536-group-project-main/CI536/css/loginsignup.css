@@ -76,9 +76,13 @@ input {
     right: 30px;
     display: flex;
     border-bottom: 1px solid rgb(255, 196, 0);
-} .switch.active {
+}
+
+.switch.active {
     border-bottom: 1px solid #12ff00;
-} .switch::after {
+}
+
+.switch::after {
     position: absolute;
     content: '';
     width: 52px;
@@ -87,7 +91,9 @@ input {
     border-radius: 60px 60px 0 0;
     bottom: 0;
     left: 12px;
-} .switch.active:after {
+}
+
+.switch.active:after {
     left: 84px;
     width: 74px;
     background: #12ff00
@@ -141,7 +147,9 @@ input {
 
 .element {
     position: relative;
-} .element input {
+}
+
+.element input {
     width: 80%;
     height: 40px;
     border-radius: 4px;
@@ -151,24 +159,20 @@ input {
     padding-left: 40px;
     font-size: 20px;
     letter-spacing: 1px;
-} .element input.success {
-    border: 1px solid #00ff00
-} .element input.error {
-    border: 1px solid #ff0000
-} .element span {
+}
+
+.element span {
     position: absolute;
     left: 7.75%;
     top: 12px;
     text-align: left;
-} .element .fa-eye, .element .fa-eye-slash {
+}
+
+.element .fa-eye, .element .fa-eye-slash {
     cursor: pointer;
     left: 87%;
     text-align: right;
-} .element #email-msg {
-    position: absolute;
-    top: 2.75rem;
-    font-size: 14px;
-}
+} 
 
 .btn {
     padding: 5px 25px;
@@ -179,13 +183,34 @@ input {
     border: none;
     margin-top: 5px;
     cursor: pointer;
-    -webkit-transition: background-color 2s ease-out;   /* Not working, for some reason */
-    transition: background-color 2s ease-out;           /* the transition is instant */
-} .btn:hover, .btn:active {
-    background: linear-gradient(45deg, var(--secondary-color), var(--accent-gradient));
-    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(1.01);
+}
+
+.element #email-msg {
+    position: absolute;
+    top: 2.75rem;
+    font-size: 14px;
 }
 
 #pg2 div.element:nth-child(3) {
     transition: margin-top 250ms ease;
 }
+
+.element input.success {
+    border: 1px solid #00ff00
+}
+
+.element input.error {
+    border: 1px solid #ff0000
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--primary-color-light) inset !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    box-shadow: 0 0 0 30px var(--primary-color-light) inset !important;
