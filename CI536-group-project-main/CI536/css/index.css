@@ -153,16 +153,14 @@ nav .search-icon {
   max-width: 250px;
 }
 
-a[data-toggle="collapse"] {
-  position: relative;
+.sidenav.show{
+  left: 0px;
 }
 
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+.sidenav a{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 
@@ -208,11 +206,16 @@ color:#fff;
 background-color: rgb(15, 14, 26);
 padding-top: 15px;
 padding-left:20px;
+text-align: center;
 }
 
 /* needs changing w screensize*/
 .btn.click{
-  left: 200px;
+  left: 0px;
+}
+/*might need to be deleted */
+.btn span{
+  font-size: 15px;
 }
 a.btn1 {
   color: #fff;
@@ -261,6 +264,7 @@ li{
   position:relative;
 }
 
+
 .card-text ul li{
   color: #fff;
   justify-content: flex-start;
@@ -269,25 +273,26 @@ li{
   left:80px;
 }
 
-nav ul {
-  color: red;
+.sidenav ul {
+  color: purple;
   list-style: none;
 }
 
-nav ul li a{
+.sidenav ul li a{
   text-decoration: none;
 }
-nav ul li a:hover {
+.sidenav ul li a:hover {
 color:purple;
 background-color: violet;
 }
 
-nav ul ul {
+.sidenav ul ul {
   display: none;
 }
 
-nav ul ul li label{
-font-style: italic;
+.sidenav ul ul li label{
+font-size: 12px;
+
 }
 
 label:hover {

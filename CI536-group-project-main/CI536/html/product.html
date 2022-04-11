@@ -43,8 +43,8 @@
     
     <div class="container-fluid">
       <div class="row content">
-            <nav class="col-sm-2 sidenav">
-              <ul class="list-unstyled components dropdown">
+            <div class="col-sm-2 sidenav">
+              <ul>
                 <li class="active"><a href="#" class="dropdown-toggle1">Price</a></li> 
                 <span class="fas fa-caret-down"></span>
                 <ul class="dropdown1">
@@ -52,15 +52,15 @@
                       <label>
                       <input type="checkbox" id="price1">£400
                       </label></li>
-                    <li class="form-group">
+                    <li>
                       <label>
                       <input type="checkbox" id="price2">£400-£600
                     </label></li>
-                    <li class="form-group"> 
+                    <li> 
                       <label>
                       <input type="checkbox" id="price3">£600-£800
                     </label> </li>
-                    <li class="form-group">
+                    <li>
                       <label>
                        <input type="checkbox" id="price4">£800+
                       </label> </li>
@@ -78,14 +78,14 @@
                 <li><a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle3">Brand</a></li>
                 <span class="fas fa-caret-down"></span>
                   <ul class="dropdown3">
-                      <li class="form-group"> <input type="checkbox" id="HP"> <label for="HP">HP</label> </li>
-                      <li class="form-group"> <input type="checkbox" id="Lenovo"> <label for="Lenovo">Lenovo</label> </li>
-                      <li class="form-group"> <input type="checkbox" id="Dell"> <label for="Dell">Dell</label> </li>
-                      <li class="form-group"> <input type="checkbox" id="Apple"> <label for="Apple">Apple</label> </li>
+                      <li> <input type="checkbox" id="HP"> <label for="HP">HP</label> </li>
+                      <li> <input type="checkbox" id="Lenovo"> <label for="Lenovo">Lenovo</label> </li>
+                      <li> <input type="checkbox" id="Dell"> <label for="Dell">Dell</label> </li>
+                      <li> <input type="checkbox" id="Apple"> <label for="Apple">Apple</label> </li>
                   </ul>
                 
               </ul>
-            </nav>
+            </div>
             <!--Product section-->
               <div class="col-sm-9 section">
                  <!--sidebar nav toggle button-->
@@ -134,19 +134,19 @@
   <script>
     $('.btn').click(function(){
            $(this).toggleClass("click");
-           $('.sidebar').toggleClass("show");
+           $('.sidenav ul').toggleClass("show");
          });
-         
+
      $('.dropdown-toggle1').click(function(){
-      $('nav ul .dropdown1').toggleClass("show");
+      $('.sidenav ul .dropdown1').toggleClass("show");
      });
 
      $('.dropdown-toggle2').click(function(){
-      $('nav ul .dropdown2').toggleClass("show");
+      $('.sidenav ul .dropdown2').toggleClass("show");
      });
      
      $('.dropdown-toggle3').click(function(){
-      $('nav ul .dropdown3').toggleClass("show");
+      $('.sidenav ul .dropdown3').toggleClass("show");
      });
      </script>
 </body>
