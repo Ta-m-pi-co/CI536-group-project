@@ -193,15 +193,16 @@ h3{
   border-bottom-width: thin;
 }
 
-.card{
+.section{
   margin-bottom: 20px;
+  padding: 10px;
+  
 }
 .card-body{
   color: #fff;
 }
 
 .btn{
-position: absolute;
 display:block;
 width:40px;
 padding:5px;
@@ -442,4 +443,34 @@ label:hover {
     margin: 0 10px;
     font-size: 16px;
   }
+  /*product page*/
+  .sidenav{
+    display: none;
+  }
+  .card-header{
+    margin: 5px;
+    text-align: justify;
+    text-justify: inter-word
+  }
+  .card-img-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .ratings{
+    justify-content: center;
+  }
+
+  .card-body .ratings{
+    justify-content: center;
+  }
+
+  .section{
+    width: auto;
+  }
+  .card-text li{
+    padding-left: 5px;
+  }
+
 }
