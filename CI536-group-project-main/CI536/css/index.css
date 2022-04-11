@@ -470,7 +470,7 @@ label:hover {
     width: auto;
   }
   .card-text li{
-    padding-left: 5px;
+    display: none;
   }
 
 }
