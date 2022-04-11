@@ -9,7 +9,7 @@
     <title>Laptopia | Login & Sign up</title>
 </head>
 <body>
-    <img id="logo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo" width="100px">
+    <img id="logo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo" width="150px">
     <div class="container">
         <div class="switch">
             <div class="login" onclick="scrollToLogin();">Login</div>
@@ -20,8 +20,9 @@
             <form id="form">
                 <div id="pg1" class="page">
                     <h3>Login to Laptopia</h3>
+                    <label id="login-error" class="errorMessage"><?php echo $errorL ?></label>
                     <div class="element">
-                        <input id="login-username" type="text" placeholder="Username">
+                        <input id="login-username" type="text" placeholder="Username" value="<?php echo $lUsername ?>">
                         <span class="fas fa-user"></span>
                     </div>
                     <div class="element">
@@ -34,13 +35,14 @@
 
                 <div id="pg2" class="page">
                     <h3>Sign up to Laptopia</h3>
+                    <label id="signup-error" class="errorMessage"><?php echo $errorS ?></label>
                     <div class="element">
-                        <input id="email" type="email" placeholder="Enter Email Address" autocomplete="off">
+                        <input id="email" type="email" placeholder="Enter Email Address" autocomplete="off" value="<?php echo $email ?>">
                         <span class="fas fa-envelope"></span>
                         <span id="email-msg"></span>
                     </div>
                     <div class="element">
-                        <input id="signup-username" type="text" placeholder="Create Username">
+                        <input id="signup-username" type="text" placeholder="Create Username" value="<?php echo $sUsername ?>">
                         <span class="fas fa-user"></span>
                     </div>
                     <div class="element">
@@ -53,7 +55,7 @@
             </form>
         </div>
     </div>
-    <script src="../javascript/index.js"></script>
+    <script src="../javascript/loginsignup.js"></script>
     <script src="../javascript/validation.js"></script>
 </body>
 </html>

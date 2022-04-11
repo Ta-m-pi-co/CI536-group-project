@@ -1,6 +1,6 @@
 window.addEventListener('load', function(evt){
 
-    var signupBtn = document.querySelector('#signup-btn'),
+    const signupBtn = document.querySelector('#signup-btn'),
     loginBtn = document.querySelector('#login-btn'),
     loginUsername = document.querySelector('#login-username');
     loginPassword = document.querySelector('#login-password');
@@ -15,12 +15,10 @@ window.addEventListener('load', function(evt){
     
     signupBtn.addEventListener('click', function(evt){
         evt.preventDefault();
-        fieldsOkSign = true;
-        if(signupUsername.value.trim().length === 0) {
-            fieldsOkSign = false;
-        } else if (signupPassword.value.trim().length === 0) {
-            fieldsOkSign = false;
-        } else if (email.value.trim().length === 0) {
+        let fieldsOkSign = true;
+        if(signupUsername.value.trim().length === 0 || 
+           signupPassword.value.trim().length === 0 || 
+           email.value.trim().length === 0) {
             fieldsOkSign = false;
         }
         if (fieldsOkSign === true) {
@@ -30,10 +28,8 @@ window.addEventListener('load', function(evt){
 
     loginBtn.addEventListener('click', function(evt){
         evt.preventDefault();
-        fieldsOk = true;
-        if(loginUsername.value.trim().length === 0) {
-        fieldsOk = false;
-        } else if (loginPassword.value.trim().length === 0) {
+        let fieldsOk = true;
+        if(loginUsername.value.trim().length === 0 || loginPassword.value.trim().length === 0) {
             fieldsOk = false;
         }
         if (fieldsOk === true) {
