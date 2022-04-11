@@ -238,6 +238,65 @@ li{
   position:relative;
   left:80px;
 }
+
+nav ul {
+  color: red;
+  list-style: none;
+}
+
+nav ul li a{
+  text-decoration: none;
+}
+nav ul li a:hover {
+color:purple;
+background-color: violet;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul ul li label{
+font-style: italic;
+}
+
+label:hover {
+  color: purple;
+}
+
+/*new css needs to be changed */
+.checkbox-menu li label {
+  display: block;
+  padding: 3px 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+  margin:0;
+  transition: background-color .4s ease;
+}
+.checkbox-menu li input {
+  margin: 0px 5px;
+  top: 2px;
+  position: relative;
+}
+
+.checkbox-menu li.active label {
+  background-color: #cbcbff;
+  font-weight:bold;
+}
+
+.checkbox-menu li a:hover,
+.checkbox-menu li :focus {
+  background-color: red;
+}
+
+.checkbox-menu li.active label:hover,
+.checkbox-menu li.active label:focus {
+  background-color: #b8b8ff;
+}
+
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
     nav .nav-items ul{
