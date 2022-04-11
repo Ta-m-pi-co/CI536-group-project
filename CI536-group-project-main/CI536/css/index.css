@@ -177,7 +177,7 @@ height:auto;
 
 .card-header{
   color:#fff;
-  font-style: bold;
+  font-weight: bold;
   font-size: 18px;
   padding: 10px;
 }
@@ -198,28 +198,58 @@ h3{
 .card-body{
   color: #fff;
 }
- .btn{
+
+.btn{
+position: absolute;
 display:block;
-width:130px;
+width:40px;
 padding:5px;
 color:#fff;
+background-color: rgb(15, 14, 26);
+padding-top: 15px;
+padding-left:20px;
+}
+
+/* needs changing w screensize*/
+.btn.click{
+  left: 200px;
+}
+a.btn1 {
+  color: #fff;
+  text-align: center;
+  margin:5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+}
+.btn1{
+  border-color:#610AD1;
+  border-style: solid;
+  padding:5px;
+  display: block;
   
 }
 
-
-#btn1{
-  border-color:#610AD1;
-  padding:5px;
+a.btn2 {
+  color: #fff;
+  text-align: center;
+  margin:5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
 }
 
-#btn2{
+.btn2{
   background-color:#610AD1;
   padding: 5px;
   border:none;
+  display: block;
 }
 
 h4{
   color:#fff;
+  text-align: center;
+  margin:20px;
 }
 
 ul {
@@ -264,38 +294,6 @@ label:hover {
   color: purple;
 }
 
-/*new css needs to be changed */
-.checkbox-menu li label {
-  display: block;
-  padding: 3px 10px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857143;
-  color: #333;
-  white-space: nowrap;
-  margin:0;
-  transition: background-color .4s ease;
-}
-.checkbox-menu li input {
-  margin: 0px 5px;
-  top: 2px;
-  position: relative;
-}
-
-.checkbox-menu li.active label {
-  background-color: #cbcbff;
-  font-weight:bold;
-}
-
-.checkbox-menu li a:hover,
-.checkbox-menu li :focus {
-  background-color: red;
-}
-
-.checkbox-menu li.active label:hover,
-.checkbox-menu li.active label:focus {
-  background-color: #b8b8ff;
-}
 
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {

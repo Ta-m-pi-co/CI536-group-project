@@ -123,8 +123,8 @@
                       </div>
                         <div class="col-sm-3">
                           <h4 class="price">Price</h4>
-                        <a href="#" class="btn" id="btn1">View Product</a>
-                        <a href="#" class="btn btn-info" id="btn2">Add to Basket</a>
+                        <a href="#" class="btn1">View Product</a>
+                        <a href="#" class="btn2">Add to Basket</a>
                         </div>
                   </div>
                 
@@ -132,6 +132,11 @@
         </div>
     </div>
   <script>
+    $('.btn').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+         
      $('.dropdown-toggle1').click(function(){
       $('nav ul .dropdown1').toggleClass("show");
      });
