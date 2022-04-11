@@ -143,15 +143,29 @@ nav .search-icon {
 }
 
 /*product.html info */
+
+
 .sidenav {
   height:100%;
   border-color: #fff;
   padding-left:20px;
+  min-width: 250px;
+  max-width: 250px;
 }
 
-.row.content {
-  height: 1500px;
+a[data-toggle="collapse"] {
+  position: relative;
 }
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+
 .row{
   border:#610AD1;
 }
