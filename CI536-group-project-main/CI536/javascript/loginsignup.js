@@ -1,39 +1,41 @@
 window.addEventListener('load', function(evt){
 
-    const signupBtn = document.querySelector('#signup-btn'),
-    loginBtn = document.querySelector('#login-btn'),
-    loginUsername = document.querySelector('#login-username');
-    loginPassword = document.querySelector('#login-password');
-    email = document.querySelector('#email');
-    signupUsername = document.querySelector('#signup-username');
-    signupPassword = document.querySelector('#signup-password');
-    signupErrorMessage = document.querySelector('#signup-error');
+    const signupBtn = document.querySelector('#signup-btn');
+    const loginBtn = document.querySelector('#login-btn');
+    const loginUsername = document.querySelector('#login-username');
+    const loginPassword = document.querySelector('#login-password');
+    const email = document.querySelector('#email');
+    const signupUsername = document.querySelector('#signup-username');
+    const signupPassword = document.querySelector('#signup-password');
+    const signupErrorMessage = document.querySelector('#signup-error');
     
-    if(signupErrorMessage.textContent.length !== 0){
-        scrollToSignUp();
-    }
+    if (signupErrorMessage.textContent.length !== 0) { scrollToSignUp(); }
     
-    signupBtn.addEventListener('click', function(evt){
+    signupBtn.addEventListener('click', function() {
         evt.preventDefault();
         let fieldsOkSign = true;
-        if(signupUsername.value.trim().length === 0 || 
+        
+        if (signupUsername.value.trim().length === 0 || 
            signupPassword.value.trim().length === 0 || 
            email.value.trim().length === 0) {
             fieldsOkSign = false;
         }
+        
         if (fieldsOkSign === true) {
             window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?susername=' + signupUsername.value.trim() + '&spassword=' +  signupPassword.value.trim()+ '&email=' +  email.value.trim();
         }
     })
 
-    loginBtn.addEventListener('click', function(evt){
+    loginBtn.addEventListener('click', function() {
         evt.preventDefault();
         let fieldsOk = true;
-        if(loginUsername.value.trim().length === 0 || loginPassword.value.trim().length === 0) {
+        
+        if (loginUsername.value.trim().length === 0 || loginPassword.value.trim().length === 0) {
             fieldsOk = false;
         }
+        
         if (fieldsOk === true) {
-        window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?lusername=' + loginUsername.value.trim() + '&lpassword=' +  loginPassword.value.trim();
+            window.location.href = 'https://cw1019.brighton.domains/Laptopia/html/loginsignup.php?lusername=' + loginUsername.value.trim() + '&lpassword=' +  loginPassword.value.trim();
         }
     })
 })
@@ -41,7 +43,7 @@ window.addEventListener('load', function(evt){
 let current = 1;
     
     /**
-     * Scrolls to the LOGIN form in 'loginsignup.html', which simultaneously hides the SIGN UP form.
+     * Scrolls to the Login form in 'loginsignup.html', which simultaneously hides the Sign Up form.
      */
     function scrollToLogin() {
         document.querySelector("#form").style.marginLeft="0";
@@ -51,7 +53,7 @@ let current = 1;
     }
     
     /**
-     * Scrolls to the SIGN UP form in 'loginsignup.html', which simultaneously hides the LOGIN form.
+     * Scrolls to the Sign Up form in 'loginsignup.html', which simultaneously hides the Login form.
      */
     function scrollToSignUp() {
         document.querySelector("#form").style.marginLeft="-100%";
