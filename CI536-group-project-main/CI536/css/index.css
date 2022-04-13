@@ -311,6 +311,15 @@ label:hover {
         flex: 1;
         padding: 0 0 0 40px;  
       }
+      /* product page buttons*/
+    .btn1{
+      width:fit-content;
+      
+    }
+    .btn2{
+      width: fit-content;
+    }
+
     
 }
 
@@ -319,10 +328,24 @@ label:hover {
   nav {
     padding: 0 50px;
   }
+
+  sidenav a{
+    font-size: 16px;
+  }
 }
 /*Medium Screens*/
 @media (max-width: 1140px) {
 
+  .btn1{
+    width:fit-content;
+  }
+  .btn2{
+    width:fit-content;
+  }
+  .col-sm-6 ul{
+    display: inline;
+    list-style-position: inside;
+  }
   nav {
     padding: 0px;
   }
@@ -445,7 +468,16 @@ label:hover {
   }
   /*product page*/
   .sidenav{
-    display: none;
+    height: fit-content;
+    width: auto;
+    justify-content: center;
+    
+  }
+  .sidenav a{
+    text-align: center;
+    float: none;
+    width: auto;
+    justify-content: center;
   }
   .card-header{
     margin: 5px;
