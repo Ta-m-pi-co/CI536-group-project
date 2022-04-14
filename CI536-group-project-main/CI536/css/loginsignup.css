@@ -169,7 +169,7 @@ input {
     cursor: pointer;
     left: 87%;
     text-align: right;
-} .element #email-msg {
+} .element #email-msg, .element #username-msg, .element #password-msg {
     position: absolute;
     top: 2.75rem;
     font-size: 14px;

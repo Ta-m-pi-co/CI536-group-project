@@ -50,7 +50,7 @@
             $sPassword = $conn->real_escape_string($sPassword);
             $email = $conn->real_escape_string($email);
             
-            if (strlen($sUsername)<=3 or strlen($sUsername)>=33 or strlen($sPassword)<=3 or strlen($sPassword)>=33 or strlen($email)<=3 or strlen($email)>=33){
+            if (strlen($sUsername)<4 or strlen($sUsername)>32 or strlen($sPassword)<8 or strlen($sPassword)>32 or !preg_match("#[0-9]+#", $sPassword) or !preg_match("#[a-zA-Z]+#", $sPassword) or !preg_match("#\W+#", $sPassword) or strlen($email)<=3 or strlen($email)>=41 or !filter_var($email, FILTER_VALIDATE_EMAIL)){
                 $userValid = false;
                 $errorS = "1 or more Inputs are Invalid";
             }else{
@@ -110,7 +110,7 @@
             <form id="form">
                 <div id="pg1" class="page">
                     <h3>Login to Laptopia</h3>
-                    <label id="login-error" class="errorMessage"><?php echo $errorL ?></label>
+                    <label id="login-error"><?php echo "<div style=\"color: rgb(255, 0, 0); margin-bottom: 15px;\">" . $errorL . "</div>"?></label>
                     <div class="element">
                         <input id="login-username" type="text" placeholder="Username" value="<?php echo $lUsername ?>">
                         <span class="fas fa-user"></span>
@@ -125,7 +125,7 @@
 
                 <div id="pg2" class="page">
                     <h3>Sign up to Laptopia</h3>
-                    <label id="signup-error" class="errorMessage"><?php echo $errorS ?></label>
+                    <label id="signup-error"><?php echo "<div style=\"color: rgb(255, 0, 0); margin-bottom: 15px;\">" . $errorS . "</div>"?></label>
                     <div class="element">
                         <input id="email" type="email" placeholder="Enter Email Address" autocomplete="off" value="<?php echo $email ?>">
                         <span class="fas fa-envelope"></span>
@@ -134,11 +134,13 @@
                     <div class="element">
                         <input id="signup-username" type="text" placeholder="Create Username" value="<?php echo $sUsername ?>">
                         <span class="fas fa-user"></span>
+                        <span id="username-msg"></span>
                     </div>
                     <div class="element">
                         <input id="signup-password" type="password" placeholder="Create Password">
                         <span class="fas fa-lock"></span>
                         <span class="far fa-eye-slash" onclick="toggleSignUpPwd(this)"></span>
+                        <span id="password-msg"></span>
                     </div>
                     <button id="signup-btn" class="btn">Sign up</button>
                 </div>
