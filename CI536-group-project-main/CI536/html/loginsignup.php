@@ -2,6 +2,7 @@
     
 	$errorL = '';
 	$errorS = '';
+	$logo = '../ImgSrc/laptopialogo3.png';
 	
 	$conn = mysqli_connect('localhost', 'cw1019_admin', '0B+F4pp_~u{p', 'cw1019_laptopia_database');
 	
@@ -30,6 +31,7 @@
               }
             } else {
               $errorL = "Wrong Username or Password";
+              $logo = '../ImgSrc/laptopialogo_error.png';
             }
             $conn->close();
         }
@@ -82,7 +84,7 @@
                     setcookie('username', $_GET['susername'], time()+3600, "cw1019.brighton.domains");
                     header("Location: https://cw1019.brighton.domains/Laptopia/html/");
                 	}
-            }
+            }else{$logo = '../ImgSrc/laptopialogo_error.png';}
         	$conn->close();
         }
 	}
@@ -99,7 +101,9 @@
     <title>Laptopia | Login & Sign up</title>
 </head>
 <body>
-    <img id="logo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo" width="150px">
+    <a href="https://cw1019.brighton.domains/Laptopia/html/index.html">
+        <img id="logo" src=<?php echo $logo?> alt="Laptopia Logo" width="150px" onmouseover="this.src='../ImgSrc/laptopialogo_home.png'" onmouseout="this.src='<?php echo $logo?>'">
+    </a>
     <div class="container">
         <div class="switch">
             <div class="login" onclick="scrollToLogin();">Login</div>
