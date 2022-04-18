@@ -457,6 +457,18 @@ label:hover {
   nav form {
     right: 30px;
   }
+
+  /*product page */
+  .sidenav{
+    height: fit-content;
+    width: auto;
+    justify-content: center;
+    
+  }
+
+  .col-sm-9{
+    width: fit-content;
+  }
 }
 /*very small screens*/
 @media (max-width: 350px) {
