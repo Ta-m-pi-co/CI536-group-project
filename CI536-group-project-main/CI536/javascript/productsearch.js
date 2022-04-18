@@ -3,23 +3,24 @@ window.addEventListener('load', function(evt){
 })
 
 function contactAPI() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://reqbin.com/echo/post/json");
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.setRequestHeader("Content-Type", "application/json");
-
-    xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-        console.log(xhr.status);
-        console.log(xhr.responseText);
-    }};
-
-    let data = `{
-    "Id": 78912,
-    "Customer": "Jason Sweet",
-    "Quantity": 1,
-    "Price": 18.00
-    }`;
-
-    xhr.send(data);
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+    myHeaders.append("Cookie", "NOTEBSESSID=cr1ht6o1sqd5ph34n74jlkbk96");
+    
+    var urlencoded = new URLSearchParams();
+    urlencoded.append("apikey", "112233aabbcc");
+    urlencoded.append("method", "get_model_info");
+    urlencoded.append("param[model_id]", "538");
+    
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: urlencoded,
+      redirect: 'follow'
+    };
+    
+    fetch("https://noteb.com/api/webservice.php", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
 }
