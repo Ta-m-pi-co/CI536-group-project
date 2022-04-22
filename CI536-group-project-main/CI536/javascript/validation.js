@@ -78,8 +78,8 @@ document.querySelector("#signup-password").addEventListener("keyup", () => {
 
     passwordDiv.style.marginBottom = "1.4rem";
 
-    if (password.length < 33 && password.length > 7 && (password.match(/[a-z]/g) || password.match(/[A-Z]/g)) && password.match(/[0-9]/g) && password.match(/[!@#\$%\^&\*]/g)) {
-        form.classList.add("valid");
+    if (password.length < 33 && password.length > 7 && (password.match(/[a-z]/g) || password.match(/[A-Z]/g)) && password.match(/[0-9]/g) && password.match(/[/[\[^\'£ $%^*()}{@:\'~?><>,;@\|\\\-\-_+\-¬\`\]]/g)) {
+        form.classList.add("valid"); //#=& are not valid symbols as they interfer with the links
         form.classList.remove("invalid");
         passwordMsg.innerHTML = "Your password is valid ┌( ಠ_ಠ)┘";
         passwordMsg.style.color = "#00ff00";
@@ -90,7 +90,7 @@ document.querySelector("#signup-password").addEventListener("keyup", () => {
 
     form.classList.remove("valid");
     form.classList.add("invalid");
-    passwordMsg.innerHTML = "must be between 32 and 4 characters containing 1 letter, number & symbol";
+    passwordMsg.innerHTML = "must be between 32 and 4 characters containing 1 letter, number & valid symbol";
     passwordMsg.style.color = "#ff0000";
     document.getElementById("signup-password").classList.add("error");
 })
