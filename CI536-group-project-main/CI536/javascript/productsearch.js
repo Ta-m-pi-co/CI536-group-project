@@ -1,7 +1,7 @@
 window.addEventListener('load', function(evt){
     searchBtn = document.querySelector('#searchBtn')
     searchBar = document.querySelector('#searchBar')
-    searchfor("");
+    //searchfor("");
     
     searchBtn.addEventListener("click", function(evt){
         evt.preventDefault();
