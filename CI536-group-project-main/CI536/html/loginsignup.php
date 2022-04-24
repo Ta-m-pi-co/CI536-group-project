@@ -52,7 +52,7 @@
             $sPassword = $conn->real_escape_string($sPassword);
             $email = $conn->real_escape_string($email);
             
-            if (strlen($sUsername)<4 or strlen($sUsername)>32 or strlen($sPassword)<8 or strlen($sPassword)>32 or !preg_match("#[0-9]+#", $sPassword) or !preg_match("#[a-zA-Z]+#", $sPassword) or !preg_match("#\W+#", $sPassword) or strlen($email)<=3 or strlen($email)>=41 or !filter_var($email, FILTER_VALIDATE_EMAIL)){
+            if (strlen($sUsername)<4 or strlen($sUsername)>32 or strlen($sPassword)<8 or strlen($sPassword)>32 or !preg_match("#[0-9]+#", $sPassword) or !preg_match("#[a-zA-Z]+#", $sPassword) or !preg_match('@[^\w]@', $sPassword) or strlen($email)<=3 or strlen($email)>=41 or !filter_var($email, FILTER_VALIDATE_EMAIL)){
                 $userValid = false;
                 $errorS = "1 or more Inputs are Invalid";
             }else{
