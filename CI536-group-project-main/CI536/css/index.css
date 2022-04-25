@@ -22,6 +22,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 p {
   color: white;
 }
@@ -230,7 +234,9 @@ nav .search-icon {
 
 
 /*product.html info */
-
+.row.content {
+  height: 1500px
+}
 
 .sidenav {
   height:1500px;
@@ -315,6 +321,8 @@ a.btn1 {
   font-size: 15px;
   font-weight: bold;
   border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
 }
 .btn1{
   border-color:#610AD1;
@@ -331,6 +339,8 @@ a.btn2 {
   font-size: 15px;
   font-weight: bold;
   border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
 }
 
 .btn2{
@@ -552,11 +562,15 @@ label:hover {
     height: fit-content;
     width: auto;
     justify-content: center;
-    
+    padding-top: 100px;
   }
 
   .col-sm-9{
     width: fit-content;
+  }
+
+  .card-header{
+    text-align: center;
   }
 
   .col-sm-3{
@@ -569,23 +583,24 @@ label:hover {
     width: 50%;
     justify-content: center;
   }
-.card-text{
+  .card-text{
   padding-top: 20px;
-}
-.col-sm-6{
+  }
+  .col-sm-6{
   padding: 20px;
   display: block;
   justify-content: center;
-}
+  }
 
-.ratings.mr-2{
+  .ratings.mr-2{
   display: flex;
   justify-content: center;
-}
+  padding-bottom: 10px;
+  }
+  h4{
+    padding-right: 40px;
+  }
 
-.sidenav ul {
-  padding-top: 100px;
-}
 
 }
 /*very small screens*/
@@ -603,15 +618,25 @@ label:hover {
     justify-content: center;
     
   }
+
+
   .sidenav a{
     text-align: center;
     float: none;
     width: auto;
     justify-content: center;
   }
+
+  .col-sm-9 {
+    width: fit-content;
+  }
+
+  .card{
+    width: fit-content;
+  }
   .card-header{
     margin: 5px;
-    
+    text-align: center;
   }
   .card-img-top{
     display: block;
@@ -632,6 +657,10 @@ label:hover {
   }
   .card-text li{
     display: none;
+  }
+
+  h4{
+    padding-right: 0px;
   }
 
 }
