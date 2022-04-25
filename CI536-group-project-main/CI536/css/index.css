@@ -605,6 +605,10 @@ label:hover {
     justify-content: center;
     
   }
+.sidenav ul{
+  padding-top: 100px;
+}
+
   .sidenav a{
     text-align: center;
     float: none;
