@@ -367,6 +367,7 @@ li{
 .sidenav ul {
   color: purple;
   list-style: none;
+  padding-top: 100px;
 }
 
 .sidenav ul li a{
@@ -528,14 +529,12 @@ label:hover {
 /*small screens*/
 @media (max-width: 980px) {
   .navbar {
-    position: fixed;
+  position: fixed;
     width: 100vw;
     z-index: 1;
     
   }
- .navbar .nav-items {
-   
- }
+ 
  
   nav .menu-icon,
   nav .cancel-icon,
@@ -545,6 +544,43 @@ label:hover {
   nav form {
     right: 30px;
   }
+
+  /*product page */
+  .sidenav{
+    height: fit-content;
+    width: auto;
+    justify-content: center;
+    
+  }
+
+  .col-sm-9{
+    width: fit-content;
+  }
+
+  .col-sm-3{
+    display: flex;
+  }
+  .card-img-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    justify-content: center;
+  }
+.card-text{
+  padding-top: 20px;
+}
+.col-sm-6{
+  padding: 20px;
+  display: block;
+  justify-content: center;
+}
+
+.ratings.mr-2{
+  display: flex;
+  justify-content: center;
+}
+
 }
 /*very small screens*/
 @media (max-width: 350px) {
@@ -569,8 +605,7 @@ label:hover {
   }
   .card-header{
     margin: 5px;
-    text-align: justify;
-    text-justify: inter-word
+    
   }
   .card-img-top{
     display: block;
