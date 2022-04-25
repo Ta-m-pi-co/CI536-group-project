@@ -367,7 +367,7 @@ li{
 .sidenav ul {
   color: purple;
   list-style: none;
-  padding-top: 100px;
+  
 }
 
 .sidenav ul li a{
@@ -434,6 +434,8 @@ label:hover {
     display: inline;
     list-style-position: inside;
   }
+ 
+
   nav {
     padding: 0px;
   }
@@ -579,6 +581,10 @@ label:hover {
 .ratings.mr-2{
   display: flex;
   justify-content: center;
+}
+
+.sidenav ul {
+  padding-top: 100px;
 }
 
 }
