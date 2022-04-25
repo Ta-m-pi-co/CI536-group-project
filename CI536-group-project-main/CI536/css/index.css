@@ -619,6 +619,14 @@ label:hover {
     width: auto;
     justify-content: center;
   }
+
+  .col-sm-9 {
+    width: fit-content;
+  }
+
+  .card{
+    width: fit-content;
+  }
   .card-header{
     margin: 5px;
     
