@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="../css/index.css">
   <script src="../javascript/navbar.js"></script>
+  <script src="../javascript/productsearch.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -36,8 +37,8 @@
           <i class="fa fa-times"></i>
         </div>
         <form action="#">
-          <input type="search" class="search-data" placeholder="Search" required>
-          <button type="submit" class="fa fa-search"></button>
+          <input type="search" class="search-data" id="searchBar" placeholder="Search" required>
+          <button type="submit" class="fa fa-search" id="searchBtn" aria-hidden="true"></button>
         </form>
     </nav>
 
@@ -46,7 +47,7 @@
     <!--the whole page after the nav menu is conatined within the div class container fluid, which sets all break point widths 100%-->
     <div class="container-fluid">
       <!--row content is used to hold the columns (sidenav and the ecommerce card section)-->
-      <div class="row content">
+      <div class="row content" id="searchResults">
         <!--side nav (sidebar)-->
             <div class="col-sm-2 sidenav">
             <!-- unordered list with nested unordered lists/checkboxes-->
