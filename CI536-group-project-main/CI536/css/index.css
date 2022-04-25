@@ -565,6 +565,10 @@ label:hover {
     width: fit-content;
   }
 
+  .card-header{
+    text-align: center;
+  }
+
   .col-sm-3{
     display: flex;
   }
@@ -627,7 +631,7 @@ label:hover {
   }
   .card-header{
     margin: 5px;
-    
+    text-align: center;
   }
   .card-img-top{
     display: block;
