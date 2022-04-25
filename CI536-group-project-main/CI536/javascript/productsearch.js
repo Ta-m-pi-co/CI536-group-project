@@ -16,7 +16,7 @@ function next() {
     searchfor(searchBar.value, index)
 }
 function previous() { 
-    if(index != 0){index = index + 10}
+    if(index !== 0){index = index + 10}
     searchfor(searchBar.value, index)
 }
 
@@ -141,6 +141,9 @@ function searchfor(searchterm, index) {
                     var CPU = document.createElement("li");
                     CPU.textContent = item.CPU;
                     details.appendChild(CPU);
+                    var GraphicsCard = document.createElement("li");
+                    GraphicsCard.textContent = item.GraphicsCard;
+                    details.appendChild(GraphicsCard);
                     var RAM = document.createElement("li");
                     RAM.textContent = item.RAM;
                     details.appendChild(RAM);
@@ -157,7 +160,7 @@ function searchfor(searchterm, index) {
                     btnSection.appendChild(price);
                     
                     var viewProduct = document.createElement("a");
-                    viewProduct.setAttribute("href", "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                    viewProduct.setAttribute("href", "https://cw1019.brighton.domains/Laptopia/html/item.php?productId="+item.ProductId);
                     viewProduct.setAttribute("class", "btn1");
                     viewProduct.textContent = "View Product";
                     btnSection.appendChild(viewProduct);
