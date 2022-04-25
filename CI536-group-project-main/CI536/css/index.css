@@ -578,7 +578,7 @@ label:hover {
 }
 
 .ratings.mr-2{
-
+  display: block;
   justify-content: center;
 }
 
@@ -606,8 +606,7 @@ label:hover {
   }
   .card-header{
     margin: 5px;
-    text-align: justify;
-    text-justify: inter-word
+    
   }
   .card-img-top{
     display: block;
