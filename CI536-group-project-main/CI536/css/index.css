@@ -591,6 +591,7 @@ label:hover {
 .ratings.mr-2{
   display: flex;
   justify-content: center;
+  padding-bottom: 5px;
 }
 
 
