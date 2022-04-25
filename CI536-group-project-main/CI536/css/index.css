@@ -528,7 +528,7 @@ label:hover {
 /*small screens*/
 @media (max-width: 980px) {
   .navbar {
-  
+  position: fixed;
     width: 100vw;
     z-index: 1;
     
