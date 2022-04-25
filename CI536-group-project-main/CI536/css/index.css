@@ -321,6 +321,8 @@ a.btn1 {
   font-size: 15px;
   font-weight: bold;
   border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
 }
 .btn1{
   border-color:#610AD1;
@@ -337,6 +339,8 @@ a.btn2 {
   font-size: 15px;
   font-weight: bold;
   border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
 }
 
 .btn2{
@@ -579,20 +583,20 @@ label:hover {
     width: 50%;
     justify-content: center;
   }
-.card-text{
+  .card-text{
   padding-top: 20px;
-}
-.col-sm-6{
+  }
+  .col-sm-6{
   padding: 20px;
   display: block;
   justify-content: center;
-}
+  }
 
-.ratings.mr-2{
+  .ratings.mr-2{
   display: flex;
   justify-content: center;
-  padding-bottom: 5px;
-}
+  padding-bottom: 10px;
+  }
 
 
 
