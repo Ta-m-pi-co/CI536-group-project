@@ -597,7 +597,9 @@ label:hover {
   justify-content: center;
   padding-bottom: 10px;
   }
-
+  h4{
+    padding-right: 40px;
+  }
 
 
 }
@@ -616,9 +618,7 @@ label:hover {
     justify-content: center;
     
   }
-.sidenav ul{
-  padding-top: 100px;
-}
+
 
   .sidenav a{
     text-align: center;
@@ -657,6 +657,10 @@ label:hover {
   }
   .card-text li{
     display: none;
+  }
+
+  h4{
+    padding-right: 0px;
   }
 
 }
