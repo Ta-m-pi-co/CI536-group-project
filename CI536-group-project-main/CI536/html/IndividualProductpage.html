@@ -71,7 +71,11 @@
 
   <!-- Image of product -->
  <div class="product_image">
-     <img src="<?php echo $Image?>" width="505" height="432">
+     <img id="productImage" src="<?php echo $Image?>" width="505" height="432">
+     <img src="<?php echo $Image?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo $Image?>'">
+     <img src="<?php echo str_replace("1.jpg","2.jpg",$Image)?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo str_replace("1.jpg","2.jpg",$Image)?>'">
+     <img src="<?php echo str_replace("1.jpg","3.jpg",$Image)?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo str_replace("1.jpg","3.jpg",$Image)?>'">
+     <img src="<?php echo str_replace("1.jpg","4.jpg",$Image)?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo str_replace("1.jpg","4.jpg",$Image)?>'">
  </div>
   
  <!-- Price  of laptop -->
