@@ -578,7 +578,7 @@ label:hover {
 }
 
 .ratings.mr-2{
-  display: block;
+  display: flex;
   justify-content: center;
 }
 
