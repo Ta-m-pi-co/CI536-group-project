@@ -367,6 +367,7 @@ li{
 .sidenav ul {
   color: purple;
   list-style: none;
+  padding-top: 100px;
 }
 
 .sidenav ul li a{
