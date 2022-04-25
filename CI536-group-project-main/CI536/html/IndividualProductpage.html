@@ -17,7 +17,7 @@
     
     <div class="topnav">
         <div class="container">
-             <img src="img/logo.png" id="logo">  
+             <img src="../ImgSrc/laptopialogo3.png" id="logo">  
         </div>
        
         <div class="loginBtn">
@@ -42,7 +42,7 @@
 
      <!-- laptop title  -->
 <div class="product_info">
- <h1 id="product_title"> Product title </h1>
+ <h1 id="product_title"> <?php echo $Name ?> </h1>
  <div class="title-rate">
 
     <!-- Star ratings -->
@@ -71,13 +71,13 @@
 
   <!-- Image of product -->
  <div class="product_image">
-     <img src=" " width="505" height="432">
+     <img src="<?php echo $Image?>" width="505" height="432">
  </div>
   
  <!-- Price  of laptop -->
 <div class="product_price">
-    <p id="stock"> IN STOCK()</p>
-    <p id="price"> £599.00 </p>
+    <p id="stock"> IN STOCK(<?php echo $Stock?>)</p>
+    <p id="price"> £<?php echo $Price?> </p>
  </div>
  
 
@@ -85,16 +85,17 @@
  
  <!-- Laptop specifications -->
 <div class="specs">
-    <p> ... </p>
-    <p> ... </p>
-    <p> ... </p>
-    <p> ... </p>
-    <p> ... </p>
+    <p> <?php echo $OS?> </p>
+    <p> <?php echo $CPU?> </p>
+    <p> <?php echo $RAM?> </p>
+    <p> <?php echo $Storage?> </p>
+    <p> <?php echo $GraphicsCard?> </p>
+    <p> <?php echo $Dimentions?> </p>
 </div>
 
 <!-- product description -->
 <div class="description">
-    <p></p>
+    <p><?php echo $Description?></p>
 </div>
 
 </div>
