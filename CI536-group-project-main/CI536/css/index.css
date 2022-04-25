@@ -230,7 +230,9 @@ nav .search-icon {
 
 
 /*product.html info */
-
+.row.content {
+  height: 1500px
+}
 
 .sidenav {
   height:1500px;
