@@ -558,7 +558,7 @@ label:hover {
     height: fit-content;
     width: auto;
     justify-content: center;
-    
+    padding-top: 100px;
   }
 
   .col-sm-9{
@@ -589,9 +589,7 @@ label:hover {
   justify-content: center;
 }
 
-.sidenav ul {
-  padding-top: 100px;
-}
+
 
 }
 /*very small screens*/
