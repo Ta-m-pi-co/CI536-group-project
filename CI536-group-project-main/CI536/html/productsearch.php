@@ -10,9 +10,10 @@
         if(isset($_GET['filter400'])){$filters .= urldecode($_GET['filter400']);}
         if(isset($_GET['filter800'])){$filters .= urldecode($_GET['filter800']);}
         if(isset($_GET['filter1200'])){$filters .= urldecode($_GET['filter1200']);}
+        if(isset($_GET['filterOnward'])){$filters .= urldecode($_GET['filterOnward']);}
         if(strlen($filters) != 0){
             $filters = substr($filters, 4);
-            $filters = "AND " . $filters;
+            $filters = "AND (" . $filters . ")";
         }
         
         if (!$conn) {

@@ -46,6 +46,7 @@ window.addEventListener('load', function(evt){
         if (document.querySelector("#price1").checked === true){filters += "&filter400=%20OR%20Price%20BETWEEN%200%20AND%20400%20"}
         if (document.querySelector("#price2").checked === true){filters += "&filter800=%20OR%20Price%20BETWEEN%20400%20AND%20800%20"}
         if (document.querySelector("#price3").checked === true){filters += "&filter1200=%20OR%20Price%20BETWEEN%20800%20AND%201200%20"}
+        if (document.querySelector("#price4").checked === true){filters += "&filterOnward=%20OR%20Price%20>%201200%20"}
         return filters;
     }
     
