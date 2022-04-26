@@ -1,14 +1,17 @@
 window.addEventListener('load', function(evt){
-    searchBtn = document.querySelector('#searchBtn')
-    searchBar = document.querySelector('#searchBar')
+    searchBtn = document.querySelector('#searchBtn');
+    searchBar = document.querySelector('#searchBar');
     var index = 0,
-    totalHits;
+    totalHits,
+    searchingFor = "";
+
     searchfor("", index);
     
     searchBtn.addEventListener("click", function(evt){
         evt.preventDefault();
         var index = 0;
-        searchfor(searchBar.value, index);
+        searchingFor = searchBar.value
+        searchfor(searchingFor, index);
     })
     
     prevBtn.addEventListener("click", function(evt){
@@ -26,14 +29,14 @@ window.addEventListener('load', function(evt){
         console.log("index " + index)
         if(totalHits > index+10){
             index = index + 10;
-            searchfor(searchBar.value, index);
+            searchfor(searchingFor, index);
         }
         console.log("next clicked");
     }
     function previous() { 
         if(index > 9){
             index = index - 10;
-            searchfor(searchBar.value, index);
+            searchfor(searchingFor, index);
         }
         console.log("prev clicked");
     }

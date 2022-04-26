@@ -235,10 +235,11 @@ nav .search-icon {
 
 /*product.html info */
 .row.content {
-  height: 1500px
+  height: 3000px
 }
 
 .sidenav {
+  height:3000px;
   border-color: #fff;
   padding-left:20px;
   min-width: 250px;
@@ -416,9 +417,7 @@ label:hover {
     .btn2{
       width: fit-content;
     }
-    .sidenav{
-      height: 100%;
-    }
+
     
 }
 
@@ -444,10 +443,6 @@ label:hover {
   .col-sm-6 ul{
     display: inline;
     list-style-position: inside;
-  }
-
-  .sidenav{
-    height: 100%;
   }
  
 
@@ -564,13 +559,15 @@ label:hover {
 
   /*product page */
   .sidenav{
-    height: 100%;
+    height: fit-content;
     width: auto;
     justify-content: center;
     padding-top: 100px;
   }
 
-
+  .col-sm-9{
+    width: fit-content;
+  }
 
   .card-header{
     text-align: center;
@@ -583,6 +580,7 @@ label:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
     justify-content: center;
   }
   .card-text{
@@ -605,8 +603,6 @@ label:hover {
 
 
 }
-
-
 /*very small screens*/
 @media (max-width: 350px) {
   nav .menu-icon,
@@ -617,7 +613,7 @@ label:hover {
   }
   /*product page*/
   .sidenav{
-    height: 250px !important;
+    height: fit-content;
     width: auto;
     justify-content: center;
     

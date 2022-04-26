@@ -50,6 +50,9 @@
       <div class="row content">
         <!--side nav (sidebar)-->
             <div class="col-sm-2 sidenav">
+                
+                <button type="button" class="btn3" id="prevBtn">Previous</button>
+                <button type="button" class="btn3" id="nextBtn">Next</button>
             <!-- unordered list with nested unordered lists/checkboxes-->
               <ul>
                 <li class="active"><a href="#" class="dropdown-toggle1">Price</a></li> 
@@ -100,20 +103,18 @@
               
               <div>
                  <!--sidebar nav toggle button-->
-                <button type="button" class="btn">
+                <button type="button" class="btn" id="sidebar-nav-toggle">
                   <!--collapsable side bar button icon-->
                   <span class="fas fa-bars"></span>
                 </button>
               </div>
               <div id="searchResults"></div>
                 </div>
-                <button type="button" class="btn" id="prevBtn">Previous</button>
-                <button type="button" class="btn" id="nextBtn">Next</button>
                 </div>
             </div>
         </div>
   <script>
-    $('.btn').click(function(){
+    $('#sidebar-nav-toggle').click(function(){
            $(this).toggleClass("click");
            $('.sidenav ul').toggleClass("show");
          });
