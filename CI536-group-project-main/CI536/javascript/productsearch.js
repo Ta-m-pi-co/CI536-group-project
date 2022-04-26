@@ -40,6 +40,14 @@ window.addEventListener('load', function(evt){
         }
         console.log("prev clicked");
     }
+
+    function getFilters(){
+        var filters = "";
+        if (document.querySelector("#price1").checked === true){filters += "&filter400=%20OR%20Price%20BETWEEN%200%20AND%20400%20"}
+        if (document.querySelector("#price2").checked === true){filters += "&filter800=%20OR%20Price%20BETWEEN%20400%20AND%20800%20"}
+        if (document.querySelector("#price3").checked === true){filters += "&filter1200=%20OR%20Price%20BETWEEN%20800%20AND%201200%20"}
+        return filters;
+    }
     
     function searchfor(searchterm, index) {
         var xhttp = new XMLHttpRequest(),
@@ -206,11 +214,12 @@ window.addEventListener('load', function(evt){
                         viewProduct.textContent = "Add to Basket";
                         btnSection.appendChild(viewProduct);
                     
+                        console.log("https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchByAny="+searchterm+getFilters());
                     }
                 }
             }
         };
-        xhttp.open("GET", "https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchByAny="+searchterm, true);
+        xhttp.open("GET", "https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchByAny="+searchterm+getFilters(), true);
         xhttp.send();
     }
 
