@@ -43,10 +43,19 @@ window.addEventListener('load', function(evt){
 
     function getFilters(){
         var filters = "";
-        if (document.querySelector("#price1").checked === true){filters += "&filter400=%20OR%20Price%20BETWEEN%200%20AND%20400%20"}
-        if (document.querySelector("#price2").checked === true){filters += "&filter800=%20OR%20Price%20BETWEEN%20400%20AND%20800%20"}
-        if (document.querySelector("#price3").checked === true){filters += "&filter1200=%20OR%20Price%20BETWEEN%20800%20AND%201200%20"}
-        if (document.querySelector("#price4").checked === true){filters += "&filterOnward=%20OR%20Price%20>%201200%20"}
+        if (document.querySelector("#price1").checked === true){filters += "&filter400="}
+        if (document.querySelector("#price2").checked === true){filters += "&filter800="}
+        if (document.querySelector("#price3").checked === true){filters += "&filter1200="}
+        if (document.querySelector("#price4").checked === true){filters += "&filterOnward="}
+        if (document.querySelector("#screensize0").checked === true){filters += "&filter13="}
+        if (document.querySelector("#screensize1").checked === true){filters += "&filter14="}
+        if (document.querySelector("#screensize2").checked === true){filters += "&filter15="}
+        if (document.querySelector("#screensize3").checked === true){filters += "&filter16="}
+        if (document.querySelector("#screensize4").checked === true){filters += "&filter17="}
+        if (document.querySelector("#HP").checked === true){filters += "&filterHP="}
+        if (document.querySelector("#Lenovo").checked === true){filters += "&filterLeno="}
+        if (document.querySelector("#Dell").checked === true){filters += "&filterDell="}
+        if (document.querySelector("#Apple").checked === true){filters += "&filterAple="}
         return filters;
     }
     
