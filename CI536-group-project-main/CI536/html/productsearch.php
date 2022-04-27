@@ -9,7 +9,7 @@
         
         if(isset($_GET['filter400'])){$filters .= " OR Price BETWEEN 0 AND 400 ";}
         if(isset($_GET['filter800'])){$filters .= " OR Price BETWEEN 400 AND 800 ";}
-        if(isset($_GET['filter1200'])){$filters .= "& OR Price BETWEEN 800 AND 1200 ";}
+        if(isset($_GET['filter1200'])){$filters .= " OR Price BETWEEN 800 AND 1200 ";}
         if(isset($_GET['filterOnward'])){$filters .= " OR Price > 1200 ";}
         if(strlen($filters) != 0){
             $filters = substr($filters, 4);
