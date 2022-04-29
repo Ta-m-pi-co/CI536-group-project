@@ -167,15 +167,15 @@ window.addEventListener('load', function(evt){
                                 break;
                         }
                     
-                        var searchResult = document.createElement("div");
+                        searchResult = document.createElement("div");
                         searchResult.setAttribute("class", "col-sm-9 section");
                         searchResults.appendChild(searchResult);
                     
-                        var searchResultCard = document.createElement("div");
+                        searchResultCard = document.createElement("div");
                         searchResultCard.setAttribute("class", "card");
                         searchResult.appendChild(searchResultCard);
                     
-                        var nameGot = document.createElement("div"); //create the images, titles and etc from retrived info
+                        nameGot = document.createElement("div"); //create the images, titles and etc from retrived info
                         nameGot.setAttribute("class", "card-header");
                         nameGot.textContent = item.Name;
                         searchResultCard.appendChild(nameGot);
@@ -220,18 +220,23 @@ window.addEventListener('load', function(evt){
                         var OS = document.createElement("li");
                         OS.textContent = item.OS;
                         details.appendChild(OS);
+
                         var CPU = document.createElement("li");
                         CPU.textContent = item.CPU;
                         details.appendChild(CPU);
+
                         var GraphicsCard = document.createElement("li");
                         GraphicsCard.textContent = item.GraphicsCard;
                         details.appendChild(GraphicsCard);
+
                         var RAM = document.createElement("li");
                         RAM.textContent = item.RAM;
                         details.appendChild(RAM);
+
                         var Storage = document.createElement("li");
                         Storage.textContent = item.Storage;
                         details.appendChild(Storage);
+                        
                         var Dimensions = document.createElement("li");
                         Dimensions.textContent = item.Dimensions;
                         details.appendChild(Dimensions);
@@ -247,10 +252,10 @@ window.addEventListener('load', function(evt){
                         viewProduct.textContent = "View Product";
                         btnSection.appendChild(viewProduct);
                         
-                        var viewProduct = document.createElement("a");
-                        viewProduct.setAttribute("href", "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-                        viewProduct.setAttribute("class", "btn2");
-                        viewProduct.textContent = "Add to Basket";
+                        var addToBasket = document.createElement("a");
+                        addToBasket.setAttribute("href", "");
+                        addToBasket.setAttribute("class", "btn2");
+                        addToBasket.textContent = "Add to Basket";
                         btnSection.appendChild(viewProduct);
                     
                         console.log("https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchByAny="+searchterm+getFilters());
@@ -258,8 +263,8 @@ window.addEventListener('load', function(evt){
                 }
             }
         };
+
         xhttp.open("GET", "https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchByAny="+searchterm+getFilters(), true);
         xhttp.send();
     }
-
 })

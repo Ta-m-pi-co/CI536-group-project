@@ -12,6 +12,7 @@ window.addEventListener("load", function(evt){
           searchBtn.classList.add("hide");
           cancelBtn.classList.add("show");
         }
+
         cancelBtn.onclick = ()=>{
           items.classList.remove("active");
           menuBtn.classList.remove("hide");
@@ -19,6 +20,7 @@ window.addEventListener("load", function(evt){
           cancelBtn.classList.remove("show");
           form.classList.remove("active"); 
         }
+        
         searchBtn.onclick = ()=>{
           form.classList.add("active");
           searchBtn.classList.add("hide");
