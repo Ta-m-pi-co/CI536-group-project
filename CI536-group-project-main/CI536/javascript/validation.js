@@ -78,7 +78,8 @@ document.querySelector("#signup-password").addEventListener("keyup", () => {
 
     passwordDiv.style.marginBottom = "1.4rem";
 
-    if (password.length < 33 && password.length > 7 && (password.match(/[a-z]/g) || password.match(/[A-Z]/g)) && password.match(/[0-9]/g) && password.match(/[/[\[^\'£ $%^*()}{@:\'~?><>,;@\|\\\-\-_+\-¬\`\]]/g)) {
+    if (password.length < 33 && password.length > 7 && (password.match(/[a-z]/g) || password.match(/[A-Z]/g)) 
+        && password.match(/[0-9]/g) && password.match(/[/[\[^\'£ $%^*()}{@:\'~?><>,;@\|\\\-\-_+\-¬\`\]]/g)) {
         form.classList.add("valid"); //#=& are not valid symbols as they interfer with the links
         form.classList.remove("invalid");
         passwordMsg.innerHTML = "Your password is valid ┌( ಠ_ಠ)┘";
