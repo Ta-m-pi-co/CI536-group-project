@@ -8,7 +8,7 @@ window.addEventListener('load', function(evt){
             while (c.charAt(0) == ' ') {
                 c = c.substring(1);
             }
-            if (c.indexOf(name) == 0) {
+            if (c.indexOf(name) === 0) {
                 return c.substring(name.length, c.length);
             }
         }
@@ -17,9 +17,9 @@ window.addEventListener('load', function(evt){
 
     function checkCookie() {
         let username = getCookie("username");
-        if (username != "") {
+        if (username !== "") {
             var logBtn = document.querySelector('#logSign');
-            logBtn.textContent = "Logoff";
+            logBtn.textContent = "Log Out of "+username;
 
             logBtn.addEventListener("click", function(evt){
                 document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
