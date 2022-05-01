@@ -224,10 +224,10 @@ window.addEventListener('load', function(evt){
                         btnSection.appendChild(viewProduct);
                         
                         var addToBasket = document.createElement("a");
-                        addToBasket.setAttribute("href", "");
+                        addToBasket.setAttribute("href", "#");
                         addToBasket.setAttribute("class", "btn2");
                         addToBasket.textContent = "Add to Basket";
-                        btnSection.appendChild(viewProduct);
+                        btnSection.appendChild(addToBasket);
                     
                         console.log("https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchByAny="+searchterm+getFilters());
                     }
