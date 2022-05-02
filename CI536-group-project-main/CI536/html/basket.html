@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Created By Code4Education -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Laptopia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/cards.css">
+  <script src="../javascript/navbar.js"></script>
+  <script src="../javascript/index.js"></script>
+  <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="menu-icon">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="logo"><a class="logo" href="index.html"><img id="imgLogo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo"></img></a></div>
+    <div class="nav-items">
+      <ul> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        <li><a href="loginsignup.html" id="logSign"  aria-hidden="true">login/sign up</a></li>
+      </ul>
+    </div>
+    
+    <div class="search-icon">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="cancel-icon">
+      <i class="fa fa-times"></i>
+    </div>
+    <form action="#">
+      <input type="search" class="search-data" placeholder="Search" required>
+      <button type="submit" class="fa fa-search"></button>
+    </form>
+  </nav>
+  
+ <div id="basket-wrap">
+    <div class="checkout">
+       <div class="basket-items">
+
+        <!--This is for testing the responsiveness-->
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello </p>
+       </div>
+       <div class="payment">
+         <h1>Checkout</h1>
+         <p>Subtotal: £</p>
+         <p>Shipping: £</p>
+         <p>Total: £</p>
+         <button>Make Payment</button>
+       </div>
+    </div>
+    
+    <!--SPA elements-->
+    <div class="checkout-success">
+      <h1>Payment made. Thanks for shopping!</h1>
+    </div>
+    <div class="checkout-error">
+      <h1>Error, basket empty</h1>
+    </div>
+ </div>
+</body>
+</html>

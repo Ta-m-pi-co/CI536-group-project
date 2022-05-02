@@ -29,8 +29,6 @@ html, body {
 p {
   color: white;
 }
-
-
 /*body*/
 body {
   background: rgb(15, 14, 26);
@@ -402,16 +400,58 @@ font-size: 12px;
 label:hover {
   color: purple;
 }
+/*Basket Page*/
 
-/*Contact Page*/
-#contact-wrap{
-  padding-top: 5rem;
+.checkout{
+  display: flex;
+}
+/*payment element basket*/
+.payment{
+  padding: 2rem;
+  margin: 1rem;
+  margin-right: 10%;
+  float: right;
+  border-style: solid;
+  border-radius: 2rem;  
+  border-color: purple; /*change for card colours*/
+  flex: 1;
+  max-width: 18%;
+  
+}
+/*main basket container for items*/
+.basket-items {
+  padding: 2rem;
+  margin: 1rem;
+  margin-left: 10%;
+  border-style: solid;
+  border-radius: 2rem;  
+  border-color: purple; /*change for card colours*/
+  flex: 1;
+
+  
+}
+/*basket wrap*/
+#basket-wrap{
+  padding-top:5rem;
 }
 
-#contact-wrap h1 {
-  text
-
+#basket-wrap h1{
+  color:white;
 }
+
+/*SPA messages*/
+.checkout-success{
+  display: none;
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.checkout-error {
+text-align: center;
+  padding-top: 10rem;
+  display: none;
+}
+
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
     nav .nav-items ul{
@@ -610,6 +650,20 @@ label:hover {
   h4{
     padding-right: 40px;
   }
+
+
+/*TODO: make payment go under basket items */
+  .payment{
+    position: relative;
+    margin-bottom: auto;
+    
+  }
+
+  .basket-items{
+    position: relative;
+  }
+
+
 
 
 }
