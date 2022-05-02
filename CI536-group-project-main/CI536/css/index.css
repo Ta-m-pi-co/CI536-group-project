@@ -29,6 +29,8 @@ html, body {
 p {
   color: white;
 }
+
+
 /*body*/
 body {
   background: rgb(15, 14, 26);
@@ -401,6 +403,10 @@ label:hover {
   color: purple;
 }
 
+/*Contact Page*/
+.contact-wrap{
+  
+}
 
 /*this is for large screens to fix the ul and make it display properly*/
 @media (min-width: 1145px) {
