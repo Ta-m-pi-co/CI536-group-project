@@ -47,7 +47,7 @@
 
      <!-- laptop title  -->
 <div class="product_info">
- <h1 id="product_title"> <?php echo $Name ?></h1>
+ <h1 id="product_title"> Name</h1>
  <div class="title-rate">
 
     <!-- Star ratings -->
@@ -76,17 +76,17 @@
 
   <!-- Image of product -->
  <div class="product_image">
-     <img id="productImage" src="<?php echo $Image?>" width="505" height="432">
-     <img src="<?php echo $Image?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo $Image?>'">
-     <img src="<?php echo str_replace("1.jpg","2.jpg",$Image)?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo str_replace("1.jpg","2.jpg",$Image)?>'">
-     <img src="<?php echo str_replace("1.jpg","3.jpg",$Image)?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo str_replace("1.jpg","3.jpg",$Image)?>'">
-     <img src="<?php echo str_replace("1.jpg","4.jpg",$Image)?>" width="50" height="43" onclick="document.querySelector('#productImage').src='<?php echo str_replace("1.jpg","4.jpg",$Image)?>'">
+     <img id="productImage" src="Image" width="505" height="432">
+     <img src="Image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+     <img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+     <img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+     <img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
  </div>
   
  <!-- Price  of laptop -->
 <div class="product_price">
-    <p id="stock"> IN STOCK(<?php echo $Stock?>)</p>
-    <p id="price"> £<?php echo $Price?> </p>
+    <p id="stock"> IN STOCK(Stock)</p>
+    <p id="price"> £Price </p>
  </div>
  
 
@@ -94,17 +94,17 @@
  
  <!-- Laptop specifications -->
 <div class="specs">
-    <p> <?php echo $OS?> </p>
-    <p> <?php echo $CPU?> </p>
-    <p> <?php echo $RAM?> </p>
-    <p> <?php echo $Storage?> </p>
-    <p> <?php echo $GraphicsCard?> </p>
-    <p> <?php echo $Dimentions?> </p>
+    <p> OS </p>
+    <p> CPU </p>
+    <p> RAM </p>
+    <p> Storage </p>
+    <p> GraphicsCard </p>
+    <p> Dimentions </p>
 </div>
 
 <!-- product description -->
 <div class="description">
-    <p><?php echo $Description?></p>
+    <p>Description</p>
 </div>
 
 </div>
