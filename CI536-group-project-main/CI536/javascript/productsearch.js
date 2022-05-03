@@ -224,6 +224,7 @@ window.addEventListener('load', function(evt){
                         btnSection.appendChild(viewProduct);
                         
                         var addToBasket = document.createElement("a");
+                        addToBasket.setAttribute("onclick", "addComma(); setCookie('basket', getCookie('basket').substring(0,getCookie('basket').length-1)+'\"id\":"+item.ProductId+"}', 1);");
                         addToBasket.setAttribute("href", "#");
                         addToBasket.setAttribute("class", "btn2");
                         addToBasket.textContent = "Add to Basket";
