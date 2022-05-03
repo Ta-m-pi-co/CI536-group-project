@@ -1,0 +1,1075 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+@import url("normalize.css");
+
+:root {
+  /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
+  --primary-color: rgb(27, 27, 27);
+  --primary-color-light: rgb(54, 54, 54);
+  --secondary-color: rgb(135, 101, 250);
+  --accent-gradient: rgb(228, 0, 171);
+  --text-primary: white;
+  --text-secondary: rgb(189, 189, 189);
+  font-size: 18px;
+}
+/* Default styling for elements*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+p {
+  color: white;
+}
+/*body*/
+body {
+  background: rgb(15, 14, 26);
+  background-size: cover;
+  background-position: center;
+  min-height: 450px;
+  height: 100vh;
+  
+}
+#home-wrap {
+  padding-top: 5rem;
+}
+
+/*navigation bar*/
+/*primary nav element*/
+nav
+ {
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+
+/*Main Logo*/
+#imgLogo {
+  display: block;
+  width: 70px;
+  height: 60px;
+  margin: auto;
+}
+
+/*Nav Links*/
+nav .nav-items {
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;  
+}
+
+nav .nav-items ul li {
+  list-style: none;
+  padding: 0 15px;
+  
+}
+nav .nav-items ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items ul li a:hover {
+  color: rgb(135, 101, 250);
+}
+
+/*Search bar*/
+nav form {
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #171c24;
+  min-width: 18% !important;
+  border: 1px solid rgba(155, 155, 155, 0.2);
+  border-radius: 36px;
+}
+
+/*search Bar textBox*/
+nav form .search-data {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+  z-index: 1;
+  
+}
+
+/*search bar button*/
+nav form button {
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: rgb(135, 101, 250);
+  border: none;
+  border-radius: 2px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+nav form button:hover {
+  background: rgb(75, 44, 177);
+}
+
+/*responsive navigation elements. these are hidden and displayed based on screensize*/
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon {
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon {
+  display: none;
+}
+
+
+/*image carousal https://www.w3schools.com/howto/howto_js_slideshow.asp will edit for website later*/ 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/*product.html info */
+.row.content {
+  height: 3000px
+}
+
+.sidenav {
+  height:3000px;
+  border-color: #fff;
+  padding-left:20px;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.sidenav.show{
+  left: 0px;
+}
+
+.sidenav a{
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.row{
+  border:#610AD1;
+}
+
+.card-img-top{
+width: 200px;;
+height:auto;
+}
+
+.card-header{
+  color:#fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+}
+
+label{
+  color:white;
+}
+
+h3{
+  color:white;
+}
+.border .border-white{
+  color:white;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+}
+
+.section{
+  margin-bottom: 20px;
+  padding: 10px;
+  
+}
+.card-body{
+  color: #fff;
+}
+
+.btn{
+display:block;
+width:40px;
+padding:5px;
+color:#fff;
+background-color: rgb(15, 14, 26);
+padding-top: 15px;
+padding-left:20px;
+text-align: center;
+}
+
+/* needs changing w screensize*/
+.btn.click{
+  left: 0px;
+}
+/*might need to be deleted */
+.btn span{
+  font-size: 15px;
+}
+a.btn1 {
+  color: #fff;
+  text-align: center;
+  margin:5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
+}
+.btn1{
+  border-color:#610AD1;
+  border-style: solid;
+  padding:5px;
+  display: block;
+  
+}
+
+a.btn2 {
+  color: #fff;
+  text-align: center;
+  margin:5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+.btn2{
+  background-color:#610AD1;
+  padding: 5px;
+  border:none;
+  display: block;
+}
+
+h4{
+  color:#fff;
+  text-align: center;
+  margin:20px;
+}
+
+ul {
+  padding-top: 15px;
+}
+
+li{
+  color:#fff;
+  position:relative;
+}
+
+
+.card-text ul li{
+  color: #fff;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position:relative;
+  left:80px;
+}
+
+.sidenav ul {
+  color: purple;
+  list-style: none;
+  
+}
+
+.sidenav ul li a{
+  text-decoration: none;
+}
+.sidenav ul li a:hover {
+color:purple;
+background-color: violet;
+}
+
+.sidenav ul ul {
+  display: none;
+}
+
+.sidenav ul ul li label{
+font-size: 12px;
+
+}
+
+label:hover {
+  color: purple;
+}
+/*Basket Page*/
+
+.checkout{
+  display: flex;
+}
+/*payment element basket*/
+.payment{
+  padding: 2rem;
+  margin: 1rem;
+  margin-right: 10%;
+  float: right;
+  border-style: solid;
+  border-radius: 2rem;  
+  border-color: purple; /*change for card colours*/
+  flex: 1;
+  max-width: 18%;
+  
+}
+/*main basket container for items*/
+.basket-items {
+  padding: 2rem;
+  margin: 1rem;
+  margin-left: 10%;
+  border-style: solid;
+  border-radius: 2rem;  
+  border-color: purple; /*change for card colours*/
+  flex: 1;
+
+  
+}
+/*basket wrap*/
+#basket-wrap{
+  padding-top:5rem;
+}
+
+#basket-wrap h1{
+  color:white;
+}
+
+/*SPA messages*/
+.checkout-success{
+  display: none;
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.checkout-error {
+text-align: center;
+  padding-top: 10rem;
+  display: none;
+}
+
+/*this is for large screens to fix the ul and make it display properly*/
+@media (min-width: 1145px) {
+    nav .nav-items ul{
+        display: flex;
+        flex: 1;
+        padding: 0 0 0 40px;  
+      }
+      /* product page buttons*/
+    .btn1{
+      width:fit-content;
+      
+    }
+    .btn2{
+      width: fit-content;
+    }
+    
+/* laptop image div */
+.product_image {
+  position: absolute;
+  width: 505px;
+  height: 432px;
+  left: 100px;
+  top: 120px;
+  border: 4px solid #8765FA;
+  box-sizing: border-box;
+}
+
+#product_title {
+  font-family: Sora;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  width: 85%;
+}
+
+
+.product_price {
+  position: relative;
+  width: 243px;
+  height: 86px;
+  left: 714px;
+  top: 40px;
+  border: 1px solid #8765FA;
+  box-sizing: border-box;
+}
+
+#stock {
+  position: absolute;
+  top: -2em;
+  font-family: Sora;
+  font-size: 16px;
+  font-weight: 1000;
+  line-height: 20px;
+  letter-spacing: 0em;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: #0F9DCA;
+}
+
+#price {
+  text-align: center;
+  font-family: Sora;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 0em;
+  color: white;
+  padding-top: 10px;
+}
+
+#basketBtn {
+  position: absolute;
+  width: 161px;
+  height: 44px;
+  left: 970px;
+  top: 180px;
+  background: #8765FA;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.specs {
+  position: absolute;
+  width: 411px;
+  height: 280px;
+  left: 710px;
+  top: 275px;
+  border: 4px solid rgba(135, 101, 250, 0.94);
+  box-sizing: border-box;;
+}
+
+.description {
+  position: absolute;
+  margin: 0 auto;
+  width: 90%;
+  height: 191px;
+  left: 75px;
+  top: 650px;
+  border: 4px solid rgba(135, 101, 250, 0.94);
+  box-sizing: border-box;
+}
+
+.cust_reviews {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  left: 0px;
+  top: 1024px;  
+}
+.rate {
+  position: absolute;
+  background-color:rgb(15, 14, 26);
+  width: 20%;
+  height: 100%;
+}
+.rate h2 {
+  font-family: Sora;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin: auto;
+}
+/* Turn from radio buttons to stars */
+
+[type=radio] {
+  opacity: 0;
+}
+
+[type=radio]+img {
+  cursor: pointer;
+    margin: auto;
+}
+#review {
+  font-size: 15px;
+  color: #000000;
+  left: 10em;
+  font-family: Sora;
+  width: 40%;
+  margin: auto;  
+  margin-top: 50px;
+}
+.stars {
+  position: relative;
+  top: 20px;
+  left: -10px;
+}
+
+#review_no {
+  color: white;
+  position: relative;
+  top: 35px;
+  left: 100px;
+}
+ 
+}
+
+/*this is that as the screen size changes the padding changes aswell*/
+@media (max-width: 1245px) {
+  nav {
+    padding: 0 50px;
+  }
+
+  sidenav a{
+    font-size: 16px;
+  }
+}
+/*Medium Screens*/
+@media (max-width: 1140px) {
+
+  .btn1{
+    width:fit-content;
+  }
+  .btn2{
+    width:fit-content;
+  }
+  .col-sm-6 ul{
+    display: inline;
+    list-style-position: inside;
+  }
+ 
+
+  nav {
+    padding: 0px;
+  }
+  nav .logo {
+    flex: 2;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  /*for hamburger navigation(hide and display navbar)*/
+  nav .nav-items {
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  
+  nav .nav-items.active {
+    left: 0px;
+  }
+  nav .nav-items li {
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items ul li a  {
+    font-size: 20px;
+  }
+  nav form {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active {
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before {
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after {
+    position: absolute;
+    content: "";
+    height: 60px;
+    padding: 2px;
+    background: #171c24;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon {
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon i {
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide {
+    display: none;
+  }
+  nav .cancel-icon.show {
+    display: block;
+    color: #26d63b;
+  }
+}
+.nav-items {
+  margin-bottom: 0%;
+}
+
+/*small screens*/
+@media (max-width: 980px) {
+  .navbar {
+  position: fixed;
+    width: 100vw;
+    z-index: 1;
+    
+  }
+  /*body*/
+body {
+  background: var(--primary-color);
+  min-height: 450px;
+  position: relative;
+}
+
+  
+
+ 
+ 
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon {
+    margin: 0 20px;
+  }
+  nav form {
+    right: 30px;
+  }
+
+  /*product page */
+  .sidenav{
+    height: fit-content;
+    width: auto;
+    justify-content: center;
+    padding-top: 100px;
+  }
+
+  .col-sm-9{
+    width: fit-content;
+  }
+
+  .card-header{
+    text-align: center;
+  }
+
+  .col-sm-3{
+    display: flex;
+  }
+  .card-img-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    justify-content: center;
+  }
+  .card-text{
+  padding-top: 20px;
+  }
+  .col-sm-6{
+  padding: 20px;
+  display: block;
+  justify-content: center;
+  }
+
+  .ratings.mr-2{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  }
+  h4{
+    padding-right: 40px;
+  }
+
+
+/*TODO: make payment go under basket items */
+  .payment{
+    position: relative;
+    margin-bottom: auto;
+    
+  }
+
+  .basket-items{
+    position: relative;
+  }
+  
+  
+/* laptop image div */
+.product_image {
+  position: absolute; 
+  width: 500px;
+  height: 430px;
+  top: 8em;
+}
+
+#product_title {
+  font-family: Sora;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  width: 85%;
+}
+
+
+.product_price {
+  position: relative;
+  border: 1px solid #8765FA;
+  box-sizing: border-box;
+  top: 31.5em;
+  left: 3em;
+  width: 30%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#price {
+  text-align: center;
+  font-family: Sora;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 0em;
+  color: white;
+  
+}
+#stock {
+  position: absolute;
+  top: -1.5em;
+  font-family: Sora;
+  font-size: 16px;
+  font-weight: 1000;
+  line-height: 20px;;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0F9DCA;
+}
+#basketBtn {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  background: #8765FA;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  left: 12em;
+  top: 38.5em;
+  color: #FFFFFF;
+}
+.specs {
+ 
+  position: absolute;
+  width: 90%;
+  left: 1em;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid rgba(135, 101, 250, 0.94);
+  box-sizing: border-box;
+  top: 55em;
+
+}
+
+.description {
+  height: 30%;
+  position: absolute;
+  width: 80%;
+  left: 2em;
+  top: 40em;
+
+  border: 4px solid rgba(135, 101, 250, 0.94);
+  box-sizing: border-box;
+}
+
+/* Turn from radio buttons to stars */
+
+[type=radio] {
+  opacity: 0;
+}
+
+[type=radio]+img {
+  cursor: pointer;
+    margin: auto;
+}
+.stars {
+  position: relative;
+  top: 4em;
+  left: -10px;
+}
+
+.title-rate {
+  position: relative;
+  top: -0.5em;
+  left: -1em;
+}
+
+.cust_reviews {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom:-25em;
+
+} 
+
+ .rate {
+  position: absolute;
+  background-color: rgb(54, 54, 54);;
+  height: 100%;
+  width: 35%;
+}
+
+.rate h2 {
+  font-family: Sora;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin: auto;
+}
+
+.rate [type = radio] {
+  max-width: 1px;
+  max-height: 1px;
+}
+#review {
+  display: flex;
+  align-content: center;
+  left: 7em;
+  top: 2em;
+  color: #000000;
+  position: relative;
+  font-size: 10px;
+  font-family: Sora;
+  width: 40%;
+  margin: auto;  
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+/*very small screens*/
+@media (max-width: 350px) {
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  /*product page*/
+  .sidenav{
+    height: fit-content;
+    width: auto;
+    justify-content: center;
+    
+  }
+
+
+  .sidenav a{
+    text-align: center;
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+
+  .col-sm-9 {
+    width: fit-content;
+  }
+
+  .card{
+    width: fit-content;
+  }
+  .card-header{
+    margin: 5px;
+    text-align: center;
+  }
+  .card-img-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .ratings{
+    justify-content: center;
+  }
+
+  .card-body .ratings{
+    justify-content: center;
+  }
+
+  .section{
+    width: auto;
+  }
+  .card-text li{
+    display: none;
+  }
+
+  h4{
+    padding-right: 0px;
+  }
+
+
+
+}
