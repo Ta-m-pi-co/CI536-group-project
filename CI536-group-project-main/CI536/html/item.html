@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Created By Code4Education -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Laptopia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/cards.css">
+  <link rel="stylesheet" href="../css/item.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="../javascript/navbar.js"></script>
+  <script src="../javascript/index.js"></script>
+  <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="menu-icon">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="logo"><a class="logo" href="index.html"><img id="imgLogo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo"></img></a></div>
+    <div class="nav-items">
+      <ul> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        <li><a href="loginsignup.html" id="logSign"  aria-hidden="true">login/sign up</a></li>
+      </ul>
+    </div>
+    
+    <div class="search-icon">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="cancel-icon">
+      <i class="fa fa-times"></i>
+    </div>
+    <form action="#">
+      <input type="search" class="search-data" placeholder="Search" required>
+      <button type="submit" class="fa fa-search"></button>
+    </form>
+  </nav>
+
+  <div class="header">
+    <h2 id="product_title"> Name</h2>
+      <!-- Star ratings -->
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="column smallside" style="background-color:rgb(57, 57, 57);"></div>
+    <div class="column middle" style="background-color:rgb(57, 57, 57);">
+      <div class="product_image">
+        <img id="productImage" src="Image" width="505" height="432">
+          <div class="row selectimages">
+            <div class="column side"><img src="Image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'"></div>
+            <div class="column side"><img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'"></div>
+            <div class="column side"><img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'"></div>
+            <div class="column side"><img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'"></div>
+          </div>
+        </div>
+      </div>
+    <div class="column large" style="background-color:rgb(103, 103, 103);">
+      <div class="product_price">
+        <p id="stock"> IN STOCK(Stock)</p>
+        <p id="price"> £Price <button type="button" id="basketBtn"> ADD TO BASKET </button></p>
+        
+ 
+        <!-- Laptop specifications -->
+        <div class="specs">
+            <p> OS </p>
+            <p> CPU </p>
+            <p> RAM </p>
+            <p> Storage </p>
+            <p> GraphicsCard </p>
+            <p> Dimentions </p>
+        </div>
+      </div>
+    </div>
+    <div class="column smallside" style="background-color:rgb(57, 57, 57);"></div>
+  </div>
+  <div class="row" style="background-color:rgb(57, 57, 57);">
+    <!-- product description -->
+    <div class="column smallside" style="background-color:rgb(57, 57, 57);"></div>
+    <div class="column middle" style="background-color:rgb(57, 57, 57);">
+      <div class="description">
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="column smallside" style="background-color:rgb(57, 57, 57);"></div>
+  </div>
+  <div class="row" style="height:4em;"></div>
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</body>
+</html>
