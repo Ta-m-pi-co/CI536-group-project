@@ -56,15 +56,15 @@
         }
     } 
     
-    else if(isset($_GET['searchByName'])) {
-        $searchByName = $_GET['searchByName'];
+    else if(isset($_GET['searchById'])) {
+        $searchById = $_GET['searchById'];
         
         if (!$conn) {
           http_response_code(500);
         } else {
-            $searchByName = $conn->real_escape_string($searchByName);
+            $searchById = $conn->real_escape_string($searchById);
             
-            $sql = "SELECT * FROM Products WHERE Name LIKE \"%$searchByName%\"";
+            $sql = "SELECT * FROM Products WHERE ProductId = $searchById";
             
             $result = mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($connection));
             $rows = array();
