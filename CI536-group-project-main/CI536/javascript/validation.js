@@ -17,7 +17,7 @@ document.querySelector("#email").addEventListener("keyup", () => {
     if (email.match(pattern)) {
         form.classList.add("valid");
         form.classList.remove("invalid");
-        emailMsg.innerHTML = "Your email address is valid :)";
+        emailMsg.innerHTML = "Your email address is valid";
         emailMsg.style.color = "#00ff00";
         document.getElementById("email").classList.add("success");
         document.getElementById("email").classList.remove("error");
@@ -49,7 +49,7 @@ document.querySelector("#signup-username").addEventListener("keyup", () => {
     if (username.length < 33 && username.length > 3) {
         form.classList.add("valid");
         form.classList.remove("invalid");
-        usernameMsg.innerHTML = "Your username is valid ( ͡~ ͜ʖ ͡°)";
+        usernameMsg.innerHTML = "Your username is valid";
         usernameMsg.style.color = "#00ff00";
         document.getElementById("signup-username").classList.add("success");
         document.getElementById("signup-username").classList.remove("error");
@@ -78,11 +78,11 @@ document.querySelector("#signup-password").addEventListener("keyup", () => {
 
     passwordDiv.style.marginBottom = "1.4rem";
 
-    if (password.length < 33 && password.length > 7 && (password.match(/[a-z]/g) || password.match(/[A-Z]/g)) 
+    if (password.length < 33 && password.length > 3 && (password.match(/[a-z]/g) || password.match(/[A-Z]/g)) 
         && password.match(/[0-9]/g) && password.match(/[/[\[^\'£ $%^*()}{@:\'~?><>,;@\|\\\-\-_+\-¬\`\]]/g)) {
         form.classList.add("valid"); //#=& are not valid symbols as they interfer with the links
         form.classList.remove("invalid");
-        passwordMsg.innerHTML = "Your password is valid ┌( ಠ_ಠ)┘";
+        passwordMsg.innerHTML = "Your password is valid";
         passwordMsg.style.color = "#00ff00";
         document.getElementById("signup-password").classList.add("success");
         document.getElementById("signup-password").classList.remove("error");
@@ -91,7 +91,7 @@ document.querySelector("#signup-password").addEventListener("keyup", () => {
 
     form.classList.remove("valid");
     form.classList.add("invalid");
-    passwordMsg.innerHTML = "must be between 32 and 4 characters containing 1 letter, number & valid symbol";
+    passwordMsg.innerHTML = "Password must be between 4-32 characters long & contain 1 uppercase letter, number & symbol";
     passwordMsg.style.color = "#ff0000";
     document.getElementById("signup-password").classList.add("error");
 })
