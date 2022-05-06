@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Individual product page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Sora:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/IndividualProductpage.css">
+<script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
+<style>
+</style>
+<script src=""></script>
+<body>
+
+
+    <!-- Toolbar navigation and SearchBar-->
+    <nav class="navbar">
+        <div class="menu-icon">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="logo"><a class="logo" href="index.html"><img id="imgLogo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo"></img></a></div>
+        <div class="nav-items">
+          <ul> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="basket.html">Basket</a></li>
+            <li><a href="loginsignup.html" id="logSign"  aria-hidden="true">login/sign up</a></li>
+          </ul>
+        </div>
+        
+        <div class="search-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="cancel-icon">
+          <i class="fa fa-times"></i>
+        </div>
+        <form action="#">
+          <input type="search" class="search-data" placeholder="Search" required>
+          <button type="submit" class="fa fa-search"></button>
+        </form>
+      </nav>
+
+
+
+
+     <!-- laptop title  -->
+<div class="product_info">
+ <h1 id="product_title"> Name</h1>
+ <div class="title-rate">
+
+    <!-- Star ratings -->
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">
+        <img src="img/star.png">
+    </label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">
+        <img src="img/star.png">
+    </label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">
+        <img src="img/star.png">
+    </label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">
+        <img src="img/star.png">
+    </label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">
+        <img src="img/star.png">
+    </label>
+
+  </div>
+
+  <!-- Image of product -->
+ <div class="product_image">
+     <img id="productImage" src="Image" width="505" height="432">
+     <img src="Image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+     <img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+     <img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+     <img src="image" width="50" height="43" onclick="document.querySelector('#productImage').src='image'">
+ </div>
+  
+ <!-- Price  of laptop -->
+<div class="product_price">
+    <p id="stock"> IN STOCK(Stock)</p>
+    <p id="price"> £Price </p>
+ </div>
+ 
+
+ <button type="button" id="basketBtn"> ADD TO BASKET </button>
+ 
+ <!-- Laptop specifications -->
+<div class="specs">
+    <p> OS </p>
+    <p> CPU </p>
+    <p> RAM </p>
+    <p> Storage </p>
+    <p> GraphicsCard </p>
+    <p> Dimentions </p>
+</div>
+
+<!-- product description -->
+<div class="description">
+    <p>Description</p>
+</div>
+
+</div>
+
+<!-- Customer review section -->
+<div class="cust_reviews">
+    <div class="rate">
+      <h2>Customer reviews</h2>
+      <div class="stars">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">
+            <img src="img/star.png">
+        </label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">
+            <img src="img/star.png">
+        </label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">
+            <img src="img/star.png">
+        </label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">
+            <img src="img/star.png">
+        </label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">
+            <img src="img/star.png">
+        </label>
+        </div>
+        <h2 id="review_no"> (5) </h2>
+      </div>
+
+      <p id="review"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+</div>
+
+
+</body>
+</html>
