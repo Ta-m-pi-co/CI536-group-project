@@ -42,6 +42,34 @@ body {
   padding-top: 5rem;
 }
 
+/* home cards*/
+
+.home-cards{
+  padding: 5% 20% 20% 10%;
+  margin-left: 10%;
+  margin-right: auto;
+  
+}
+
+.home-cards p {
+  padding: 1rem;
+  text-align: center;
+}
+.card-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.hCard{
+ 
+    flex: 0 1 24%;
+}
+
+.hCard img {
+  background-color: white;
+}
 /*navigation bar*/
 /*primary nav element*/
 nav
@@ -606,6 +634,29 @@ text-align: center;
   nav form {
     right: 30px;
   }
+
+  /*home cards*/
+
+  .home-cards{
+    padding: 5% 78px 10%;
+    margin-left: 0;
+    margin-right: auto;
+    
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hCard {
+    flex: 0 1 calc(25% - 1em);
+}
+
+.hCard img {
+  height: 81.5px;
+  width: 86px;
+}
 
   /*product page */
   .sidenav{
