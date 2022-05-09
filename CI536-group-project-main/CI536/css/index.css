@@ -70,6 +70,12 @@ body {
 .hCard img {
   background-color: white;
 }
+
+.hCard a {
+ text-decoration: none; 
+
+
+}
 /*navigation bar*/
 /*primary nav element*/
 nav
@@ -523,7 +529,11 @@ text-align: center;
     list-style-position: inside;
   }
  
-
+.hCard img{
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+}
   nav {
     padding: 0px;
   }
