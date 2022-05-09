@@ -45,7 +45,7 @@
     <div class="checkout">
        <div class="basket-items">
 
-        <!--This is for testing the responsiveness-->
+          <!--This is for testing the responsiveness-->
           <div id="payment-info" style="display:none">
             <label for="fname">Accepted Cards</label>
             <div class="icon-container" style="background-color: rgb(199, 199, 199);width: fit-content;padding: 0.5%;">
@@ -61,7 +61,13 @@
             <p>Address: <input type="text" name="address"><br></p>
             <p>City: <input type="text" name="city"><br></p>
             <p>Postcode: <input type="text" name="postcode"><br></p>
-            <input type="submit">
+            <button onclick="document.querySelector('#payment-info').style.display = 'none';document.querySelector('#confirmation-notification').style.display = 'block';">Sumbit</button>
+          </div>
+          <div id="confirmation-notification" style="display:none">
+            <h1>Order Confirmed</h1>
+            <p>Thank You from the Laptopia Team!<br>
+            Your Order has been Confirmed and you should recived an Email soon<br>
+            We hope to see you again soon.</p>
           </div>
        </div>
        <div class="payment">
