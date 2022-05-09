@@ -5,7 +5,13 @@ window.addEventListener('load', function(evt){
     totalHits,
     searchingFor = "";
     
-    searchfor("", index);
+    
+    if(getCookie("linkSearchTerm")){
+        searchfor(getCookie("linkSearchTerm"), index);
+        document.cookie = "linkSearchTerm=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }else{
+        searchfor("", index);
+    }
     
     searchBtn.addEventListener("click", function(evt){
         evt.preventDefault();
@@ -39,6 +45,17 @@ window.addEventListener('load', function(evt){
             searchfor(searchingFor, index);
         }
         console.log("prev clicked");
+    }
+    
+    function getCookie(input) {
+    var cookieArr = document.cookie.split(";");
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        if(input == cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    return null;
     }
 
     function getFilters(){
