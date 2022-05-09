@@ -83,7 +83,7 @@ window.addEventListener('load', function(evt){
 			        })
 			        subtotal.innerHTML = "Subtotal: £"+totalFloat;
 			        shipping.innerHTML = "Shipping: £"+shippingFloat;
-			        total.innerHTML = "Total: £"+(totalFloat+shippingFloat);
+			        total.innerHTML = "Total: £"+((totalFloat+shippingFloat).toFixed(2));
 		        }
             }
         }
