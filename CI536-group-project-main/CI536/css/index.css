@@ -529,7 +529,11 @@ text-align: center;
     list-style-position: inside;
   }
  
-
+.hCard img{
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+}
   nav {
     padding: 0px;
   }
