@@ -70,6 +70,12 @@ body {
 .hCard img {
   background-color: white;
 }
+
+.hCard a {
+ text-decoration: none; 
+
+
+}
 /*navigation bar*/
 /*primary nav element*/
 nav
