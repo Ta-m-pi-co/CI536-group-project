@@ -193,7 +193,7 @@ nav .search-icon {
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
+  display:none;
   width: 100%;
   
 }
@@ -226,17 +226,6 @@ nav .search-icon {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
 
 
 /* The dots/bullets/indicators */
@@ -257,12 +246,12 @@ nav .search-icon {
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation-name:fade;
+  animation-duration: 2s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: .5}
   to {opacity: 1}
 }
 
