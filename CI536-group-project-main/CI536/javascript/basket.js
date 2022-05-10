@@ -7,11 +7,18 @@ window.addEventListener('load', function(evt){
     totalFloat = 0,
     shippingFloat = 14.99,
     total = document.querySelector("#total");
+    firstItem = 0;
+    console.log("COOKIE " + getCookie("basket"))
 
-
-    for (var i=0; i < arr.length; i++) {
-        console.log(arr[i].id)
-        searchfor(arr[i].id);
+    if (getCookie("basket")===null||getCookie("basket")==='[{}]'){
+        document.querySelector("#checkout-error").style.display="block";
+        document.querySelector(".payment").style.display="none";
+        document.querySelector(".basket-items").style.marginRight="10%";
+    }else{
+        for (var i=0; i < arr.length; i++) {
+            console.log(arr[i].id)
+            searchfor(arr[i].id);
+        }
     }
 
     function searchfor(id) {
@@ -77,6 +84,12 @@ window.addEventListener('load', function(evt){
                         
                         var RemoveFromBasket = document.createElement("a");
                         RemoveFromBasket.setAttribute("href", "#");
+                        if (firstItem === 0){
+                            RemoveFromBasket.setAttribute("onclick", "removeFromBasket("+item.ProductId+",true);");
+                            firstItem = 1;
+                        }else{
+                            RemoveFromBasket.setAttribute("onclick", "removeFromBasket("+item.ProductId+",false);");
+                        }
                         RemoveFromBasket.setAttribute("class", "btn2");
                         RemoveFromBasket.textContent = "Remove from Basket";
                         btnSection.appendChild(RemoveFromBasket);
@@ -90,6 +103,7 @@ window.addEventListener('load', function(evt){
         xhttp.open("GET", "https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchById="+id, true);
         xhttp.send();
     }
+
     function setCookie(cname, cvalue, exdays) {
         const d = new Date();
         d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -110,6 +124,6 @@ window.addEventListener('load', function(evt){
             return c.substring(name.length, c.length);
         }
         }
-        return "";
+        return null;
     }
 })

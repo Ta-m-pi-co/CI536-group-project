@@ -69,6 +69,9 @@
             Your Order has been Confirmed and you should recived an Email soon<br>
             We hope to see you again soon.</p>
           </div>
+          <div id="checkout-error" style="display:none">
+            <h1>Error, basket empty</h1>
+          </div>
        </div>
        <div class="payment">
          <h1>Checkout</h1>
@@ -78,14 +81,44 @@
          <button onclick="try{document.querySelectorAll('.card').style.display = 'none';}catch{} document.querySelector('#payment-info').style.display = 'block';">Make Payment</button>
        </div>
     </div>
-    
-    <!--SPA elements-->
-    <div class="checkout-success">
-      <h1>Payment made. Thanks for shopping!</h1>
-    </div>
-    <div class="checkout-error">
-      <h1>Error, basket empty</h1>
-    </div>
  </div>
+ <script>
+    function removeFromBasket(id, firstinlist){
+        var newcookie;
+        if (document.querySelectorAll('.card').length < 2){
+            newcookie = getCookie('basket').replace("\"id\":"+id,"");
+        }else if (firstinlist===true){
+            newcookie = getCookie('basket').replace("{\"id\":"+id+"},","");
+        }else{
+            newcookie = getCookie('basket').replace(",{\"id\":"+id+"}","");
+        }
+        console.log("newcookie ="+newcookie);
+        setCookie("basket",newcookie,1);
+        location.reload();
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+        }
+        return "";
+    }
+ </script>
 </body>
 </html>
