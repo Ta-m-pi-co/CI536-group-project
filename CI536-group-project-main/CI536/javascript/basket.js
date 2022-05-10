@@ -118,6 +118,7 @@ window.addEventListener('load', function(evt){
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 201) {
               document.querySelector('#confirmation-notification').style.display = 'block';
+              document.cookie = "basket=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             }
         };
         xhttp.open("POST", "https://cw1019.brighton.domains/Laptopia/html/createorder.php", true);
