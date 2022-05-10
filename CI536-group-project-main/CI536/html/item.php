@@ -47,6 +47,7 @@ if(isset($_GET['productId'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../javascript/navbar.js"></script>
   <script src="../javascript/index.js"></script>
+  <script src="../javascript/issignedin.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -133,7 +134,7 @@ if(isset($_GET['productId'])){
     <div class="column smallside"></div>
   </div>
   <div class="footer">
-    <p style="height:100%">Footer</p>
+    <p style="height:100%"></p>
   </div>
   <script>
   function getCookie(cname) {

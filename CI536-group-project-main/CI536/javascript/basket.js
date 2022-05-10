@@ -10,7 +10,8 @@ window.addEventListener('load', function(evt){
     shipping = document.querySelector("#shipping"),
     totalFloat = 0,
     shippingFloat = 14.99,
-    total = document.querySelector("#total");
+    total = document.querySelector("#total"),
+    payBtn = document.querySelector("#make-payment"),
     firstItem = 0;
     console.log("COOKIE " + getCookie("basket"))
 
@@ -24,6 +25,8 @@ window.addEventListener('load', function(evt){
             searchfor(arr[i].id);
         }
     }
+    
+    payBtn.addEventListener("click", placeOrder);
 
     function searchfor(id) {
         var xhttp = new XMLHttpRequest();
@@ -106,6 +109,20 @@ window.addEventListener('load', function(evt){
         }
         xhttp.open("GET", "https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchById="+id, true);
         xhttp.send();
+    }
+    
+    function placeOrder() {
+        let name = document.querySelector("#nameOnCard").value;
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 201) {
+              document.querySelector('#confirmation-notification').style.display = 'block';
+            }
+        };
+        xhttp.open("POST", "https://cw1019.brighton.domains/Laptopia/html/createorder.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("name="+name+"&price="+total.textContent.replace("Total: £", ""));
     }
 
     function setCookie(cname, cvalue, exdays) {
