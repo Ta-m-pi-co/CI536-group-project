@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $date = date("Y/m/d");
                 $headers  = 'MIME-Version: 1.0' . "\r\n";
                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-                $msg = "Hello $username!<br><br>This email is to confirm your order on the $date. <br>This order has been assigned the reference number $orderId.<br>This should arrive within 7 to 10 working days. Please don't hesitate use our <a href='https://cw1019.brighton.domains/Laptopia/html/contact.html'>Contact</a> page if there are any concerns or queries regarding the order.<br>Thank you for shopping with Laptopia!<br><br>Kind regards,<br>The Laptopia Team";
+                $msg = "Hello $username!<br><br>This email is to confirm your order on the $date. <br>This order has been assigned the reference number $orderId.<br>This should arrive within 7 to 10 working days. Please don't hesitate to use our <a href='https://cw1019.brighton.domains/Laptopia/html/contact.html'>Contact</a> page if there are any concerns or queries regarding the order.<br>Thank you for shopping with Laptopia!<br><br>Kind regards,<br>The Laptopia Team";
                 mail($email,"Laptopia: Reciept of Purchase",$msg,$headers);
                 echo $orderId;
             }
