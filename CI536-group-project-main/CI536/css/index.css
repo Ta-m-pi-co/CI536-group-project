@@ -26,10 +26,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-p {
-  color: white;
-}
-/*body*/
+
 body {
   background: rgb(15, 14, 26);
   background-size: cover;
@@ -42,10 +39,8 @@ body {
   padding-top: 5rem;
 }
 
-/*navigation bar*/
-/*primary nav element*/
-nav
- {
+/* Navigation Bar (primary nav element) */
+nav {
   background: #171c24;
   display: flex;
   flex-wrap: wrap;
@@ -155,6 +150,10 @@ nav .search-icon {
   margin: auto;
 
   
+}
+
+p {
+  color: white;
 }
 
 /* Hide the images by default */
