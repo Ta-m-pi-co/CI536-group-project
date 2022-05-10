@@ -20,13 +20,21 @@ window.addEventListener('load', function(evt){
         document.querySelector(".payment").style.display="none";
         document.querySelector(".basket-items").style.marginRight="10%";
     }else{
-        for (var i=0; i < arr.length; i++) {
-            console.log(arr[i].id)
-            searchfor(arr[i].id);
-        }
+        var tempcounter = 1;                  //  set your counter to 1
+        displayLoop();                   //  start the loop
     }
     
     payBtn.addEventListener("click", placeOrder);
+    
+    function displayLoop() {         //  create a loop function
+        setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+            searchfor(arr[tempcounter].id);
+            tempcounter++;                    //  increment the counter
+            if (tempcounter < arr.length) {           //  if the counter < 10, call the loop function
+                displayLoop();             //  ..  again which will trigger another 
+            }                       //  ..  setTimeout()
+        }, 100)
+    }
 
     function searchfor(id) {
         var xhttp = new XMLHttpRequest();
@@ -101,7 +109,7 @@ window.addEventListener('load', function(evt){
                         RemoveFromBasket.textContent = "Remove from Basket";
                         btnSection.appendChild(RemoveFromBasket);
 			        })
-			        subtotal.innerHTML = "Subtotal: £"+totalFloat;
+			        subtotal.innerHTML = "Subtotal: £"+totalFloat.toFixed(2);
 			        shipping.innerHTML = "Shipping: £"+shippingFloat;
 			        total.innerHTML = "Total: £"+((totalFloat+shippingFloat).toFixed(2));
 		        }

@@ -1,1 +1,183 @@
-document.querySelector('#confirmation-notification').style.display = 'block';
+<!DOCTYPE html>
+<!-- Created By Code4Education -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Laptopia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/cards.css">
+  <script src="../javascript/navbar.js"></script>
+  <script src="../javascript/index.js"></script>
+  <script src="../javascript/basket.js"></script>
+  <script src="../javascript/issignedin.js"></script>
+  <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="menu-icon">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="logo"><a class="logo" href="index.html"><img id="imgLogo" src="../ImgSrc/laptopialogo3.png" alt="Laptopia Logo"></img></a></div>
+    <div class="nav-items">
+      <ul> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        <li><a href="loginsignup.php" id="logSign"  aria-hidden="true">login/sign up</a></li>
+      </ul>
+    </div>
+    
+    <div class="search-icon">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="cancel-icon">
+      <i class="fa fa-times"></i>
+    </div>
+    <form action="#">
+      <input type="search" class="search-data" placeholder="Search" required>
+      <button type="submit" class="fa fa-search"></button>
+    </form>
+  </nav>
+  <div class="row">
+    <div class="column small"></div>
+  <div class="payment column side">
+         <h1 style="color:white">Checkout</h1>
+         <p id="subtotal">Subtotal: £</p>
+         <p id="shipping">Shipping: £</p>
+         <p id="total">Total: £</p>
+         <button onclick="document.querySelector('#basket-items-results').style.display = 'none'; document.querySelector('#payment-info').style.display = 'block';">Confirm</button><br><br>
+       </div>
+ <div id="basket-wrap" class="column middle">
+    <div class="checkout">
+       <div class="basket-items">
+
+          <!--This is for testing the responsiveness-->
+          <div id="payment-info" style="display:none">
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container" style="background-color: rgb(255, 255, 255);width: fit-content;padding: 0.5%;border-radius: 25px;">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <p>Card Number:<br></p>
+            <input type="text" name="CN"><br>
+            <p>Name on Card:<br></p>
+            <input id="nameOnCard" type="text" name="name"><br>
+            <p>Expiration Date:<br></p>
+            <input type="date" name="ED"><br>
+            <p>CVV:<br></p>
+            <input type="text" name="CVV"><br>
+            <p>Address:<br></p>
+            <input type="text" name="address"><br>
+            <p>City:<br></p>
+            <input type="text" name="city"><br>
+            <p>Postcode:<br></p>
+            <input type="text" name="postcode"><br><br>
+            <button id="make-payment" onclick="document.querySelector('#payment-info').style.display = 'none';document.querySelector('.payment').style.display = 'none';">Make Payment</button>
+          </div>
+          <div id="confirmation-notification" style="display:none">
+            <h1>Order Confirmed</h1>
+            <p>Thank You from the Laptopia Team!<br>
+            Your Order has been Confirmed and you should recived an Email soon<br>
+            We hope to see you again soon.</p>
+          </div>
+          <div id="checkout-error" style="display:none">
+            <h1>Error, basket empty</h1>
+          </div>
+          <div id="basket-items-results"></div>
+       </div>
+    </div>
+ </div>
+ <div class="column small"></div>
+ </div>
+ <script>
+    function removeFromBasket(id, firstinlist){
+        var newcookie;
+        if (document.querySelectorAll('.card').length < 2){
+            newcookie = getCookie('basket').replace("\"id\":"+id,"");
+        }else if (firstinlist===true){
+            newcookie = getCookie('basket').replace("{\"id\":"+id+"},","");
+        }else{
+            newcookie = getCookie('basket').replace(",{\"id\":"+id+"}","");
+        }
+        console.log("newcookie ="+newcookie);
+        setCookie("basket",newcookie,1);
+        location.reload();
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+        }
+        return "";
+    }
+ </script>
+ <style>
+     /* Container for flexboxes */
+    .row {
+      display: -webkit-flex;
+      display: flex;
+      padding-top:5rem;
+    }
+    
+    .column {
+      padding: 10px;
+      height: 300px; 
+    }
+    
+    .column.small {
+       -webkit-flex: 0.5;
+       -ms-flex: 0.5;
+       flex: 0,5;
+    }
+    
+    .column.side {
+       -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1;
+    }
+
+    .column.middle {
+      -webkit-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+    }
+
+    
+    @media (max-width: 600px) {
+      .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+      .basket-items{
+          padding:12px;
+      }
+    }
+    
+    @media (max-width: 1170px) {
+      .column.small {
+          display:none;
+      }
+    }
+</style>
+</body>
+</html>
