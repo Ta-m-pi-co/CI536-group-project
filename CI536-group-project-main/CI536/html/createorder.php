@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 http_response_code(201);
 
-                $msg = "$orderId is your order number";
+                $msg = "Thank you $username, $orderId is your order number\nContact Us from our site if you require further assistance";
                 mail($email,"Laptopia: Reciept of Purchase",$msg);
             }
         }else{
