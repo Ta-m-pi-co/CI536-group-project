@@ -20,19 +20,19 @@ window.addEventListener('load', function(evt){
         document.querySelector(".payment").style.display="none";
         document.querySelector(".basket-items").style.marginRight="10%";
     }else{
-        var tempcounter = 1;                  //  set your counter to 1
-        displayLoop();                   //  start the loop
+        var tempcounter = 0;             
+        displayLoop();            
     }
     
     payBtn.addEventListener("click", placeOrder);
     
-    function displayLoop() {         //  create a loop function
-        setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+    function displayLoop() {      
+        setTimeout(function() {   
             searchfor(arr[tempcounter].id);
-            tempcounter++;                    //  increment the counter
-            if (tempcounter < arr.length) {           //  if the counter < 10, call the loop function
-                displayLoop();             //  ..  again which will trigger another 
-            }                       //  ..  setTimeout()
+            tempcounter++;                
+            if (tempcounter < arr.length) {       
+                displayLoop();  
+            }                  
         }, 100)
     }
 
