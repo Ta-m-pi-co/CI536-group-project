@@ -114,7 +114,7 @@ if(isset($_GET['productId'])){
             <li> <?php echo $GraphicsCard ?> </li>
             <li> <?php echo $Dimensions ?> </li>
         </ul>
-        <button type="button" id="basketBtn"> ADD TO BASKET </button>
+        <button type="button" id="basketBtn" onclick="addComma(); setCookie('basket', getCookie('basket').substring(0,getCookie('basket').length-2)+'&quot;id&quot;:<?php echo $Id ?>}]', 1);"> ADD TO BASKET </button>
       </div>
     </div>
     <div class="column smallside""></div>
@@ -135,5 +135,35 @@ if(isset($_GET['productId'])){
   <div class="footer">
     <p style="height:100%">Footer</p>
   </div>
+  <script>
+  function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    if(getCookie("basket")==""){setCookie("basket","[{}]",1)}
+    
+    function addComma(){
+        if(getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
+    }
+     </script>
 </body>
 </html>
