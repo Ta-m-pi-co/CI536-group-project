@@ -126,6 +126,9 @@ window.addEventListener('load', function(evt){
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 201) {
               document.querySelector('#confirmation-notification').style.display = 'block';
+              var orderNumberReceipt = document.createElement("p");
+              orderNumberReceipt.textContent = "Your Order Reference Number is "+xhttp.responseText;
+              document.querySelector('#confirmation-notification').appendChild(orderNumberReceipt);
               document.cookie = "basket=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             }
         };

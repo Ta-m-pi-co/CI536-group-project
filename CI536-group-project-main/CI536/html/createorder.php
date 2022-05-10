@@ -31,9 +31,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     mysqli_query($conn, $sql) or die("Error in Selecting " . mysqli_error($connection));
                 }
                 http_response_code(201);
-
-                $msg = "Thank you $username, $orderId is your order number\nContact Us from our site if you require further assistance";
-                mail($email,"Laptopia: Reciept of Purchase",$msg);
+                
+                $date = date("Y/m/d");
+                $headers  = 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+                $msg = "Hello $username!<br><br>This email is to confirm your order on the $date. <br>This order has been assigned the reference number $orderId.<br>This should arrive within 7 to 10 working days. Please don't hesitate use our <a href='https://cw1019.brighton.domains/Laptopia/html/contact.html'>Contact</a> page if there are any concerns or queries regarding the order.<br>Thank you for shopping with Laptopia!<br><br>Kind regards,<br>The Laptopia Team";
+                mail($email,"Laptopia: Reciept of Purchase",$msg,$headers);
+                echo $orderId;
             }
         }else{
             http_response_code(500);
