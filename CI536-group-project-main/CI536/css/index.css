@@ -26,7 +26,10 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
+p {
+  color: white;
+}
+/*body*/
 body {
   background: rgb(15, 14, 26);
   background-size: cover;
@@ -39,8 +42,44 @@ body {
   padding-top: 5rem;
 }
 
-/* Navigation Bar (primary nav element) */
-nav {
+/* home cards*/
+
+.home-cards{
+  padding: 5% 20% 20% 10%;
+  margin-left: 10%;
+  margin-right: auto;
+  
+}
+
+.home-cards p {
+  padding: 1rem;
+  text-align: center;
+}
+.card-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.hCard{
+ 
+    flex: 0 1 24%;
+}
+
+.hCard img {
+  background-color: white;
+}
+
+.hCard a {
+ text-decoration: none; 
+
+
+}
+/*navigation bar*/
+/*primary nav element*/
+nav
+ {
   background: #171c24;
   display: flex;
   flex-wrap: wrap;
@@ -150,10 +189,6 @@ nav .search-icon {
   margin: auto;
 
   
-}
-
-p {
-  color: white;
 }
 
 /* Hide the images by default */
@@ -397,20 +432,18 @@ label:hover {
 .payment{
   padding: 2rem;
   margin: 1rem;
-  margin-right: 10%;
-  float: right;
+  
   border-style: solid;
   border-radius: 2rem;  
   border-color: purple; /*change for card colours*/
   flex: 1;
-  max-width: 18%;
   
 }
 /*main basket container for items*/
 .basket-items {
   padding: 2rem;
-  margin: 1rem;
-  margin-left: 10%;
+  margin: 0.4rem;
+  
   border-style: solid;
   border-radius: 2rem;  
   border-color: purple; /*change for card colours*/
@@ -419,9 +452,6 @@ label:hover {
   
 }
 /*basket wrap*/
-#basket-wrap{
-  padding-top:5rem;
-}
 
 #basket-wrap h1{
   color:white;
@@ -666,8 +696,6 @@ text-align: center;
     padding-right: 40px;
   }
 
-
-/*TODO: make payment go under basket items */
   .payment{
     position: relative;
     margin-bottom: auto;

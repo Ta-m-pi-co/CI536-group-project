@@ -1,11 +1,11 @@
 window.addEventListener('load', function(evt){
-
+    
     if (getCookie('username')===null){
         window.location.href = "https://cw1019.brighton.domains/Laptopia/html/loginsignup.php";
     }
 
     var arr = JSON.parse(getCookie("basket")),
-    basketItems = document.querySelector(".basket-items"),
+    basketItems = document.querySelector("#basket-items-results"),
     subtotal = document.querySelector("#subtotal"),
     shipping = document.querySelector("#shipping"),
     totalFloat = 0,
