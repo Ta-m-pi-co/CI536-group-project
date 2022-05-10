@@ -156,10 +156,10 @@
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
     
-    if(getCookie("basket")==""){setCookie("basket","{}",1)}
+    if(getCookie("basket")==""){setCookie("basket","[{}]",1)}
     
     function addComma(){
-        if(getCookie("basket")!="{}"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",}",1)}
+        if(getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
     }
      </script>
 </body>

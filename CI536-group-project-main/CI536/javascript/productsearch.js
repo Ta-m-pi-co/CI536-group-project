@@ -5,7 +5,13 @@ window.addEventListener('load', function(evt){
     totalHits,
     searchingFor = "";
     
-    searchfor("", index);
+    
+    if(getCookie("linkSearchTerm")){
+        searchfor(getCookie("linkSearchTerm"), index);
+        document.cookie = "linkSearchTerm=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    }else{
+        searchfor("", index);
+    }
     
     searchBtn.addEventListener("click", function(evt){
         evt.preventDefault();
@@ -39,6 +45,17 @@ window.addEventListener('load', function(evt){
             searchfor(searchingFor, index);
         }
         console.log("prev clicked");
+    }
+    
+    function getCookie(input) {
+    var cookieArr = document.cookie.split(";");
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+        if(input == cookiePair[0].trim()) {
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    return null;
     }
 
     function getFilters(){
@@ -224,7 +241,7 @@ window.addEventListener('load', function(evt){
                         btnSection.appendChild(viewProduct);
                         
                         var addToBasket = document.createElement("a");
-                        addToBasket.setAttribute("onclick", "addComma(); setCookie('basket', getCookie('basket').substring(0,getCookie('basket').length-1)+'\"id\":"+item.ProductId+"}', 1);");
+                        addToBasket.setAttribute("onclick", "addComma(); setCookie('basket', getCookie('basket').substring(0,getCookie('basket').length-2)+'\"id\":"+item.ProductId+"}]', 1);");
                         addToBasket.setAttribute("href", "#");
                         addToBasket.setAttribute("class", "btn2");
                         addToBasket.textContent = "Add to Basket";

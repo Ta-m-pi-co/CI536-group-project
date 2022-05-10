@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/cards.css">
   <script src="../javascript/navbar.js"></script>
   <script src="../javascript/index.js"></script>
+  <script src="../javascript/issignedin.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
         <li><a href="product.html">Product</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="basket.html">Basket</a></li>
-        <li><a href="loginsignup.html" id="logSign"  aria-hidden="true">login/sign up</a></li>
+        <li><a href="loginsignup.php" id="logSign"  aria-hidden="true">login/sign up</a></li>
       </ul>
     </div>
     
@@ -45,22 +46,22 @@
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
+  <div class="mySlides fade" style="display:block;">
     
-    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/13F00/production/_95146618_bills.jpg" >
-    <div class="text">Caption Text</div>
+    <img src="../ImgSrc/banner1.png">
+    <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
    
-    <img src="https://static.boredpanda.com/blog/wp-content/uploads/2017/12/funny-weird-wtf-stock-photos-19-5a3926af95d9d__700.jpg" >
-    <div class="text">Caption Two</div>
+    <img src="../ImgSrc/banner2.png" >
+    <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
     
-    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/13F00/production/_95146618_bills.jpg" >
-    <div class="text">Caption Three</div>
+    <img src="../ImgSrc/banner3.png" >
+    <div class="text"></div>
   </div>
 
   <!-- Next and previous buttons -->
@@ -77,38 +78,45 @@
 </div>
      
 
+<div class="home-cards">
+  <section class="card-container">
+    <article class="hCard">
+      <a href="../html/product.html" onclick="document.cookie = 'linkSearchTerm=HP;path=/;'">
+      <img src="https://logowik.com/content/uploads/images/hp-hewlett-packard.jpg" alt="hpLogo" height="160px">
       <p>
-        happy happy happy happy happy happy happy happy happy happy happy happy happy 
-        happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
-        happy happy happy happy happy happy happy happy happy happy happy happy happy 
-        happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
+        HP
       </p>
+    </a>
+    </article>
 
-      happy happy happy happy happy happy happy happy happy happy happy happy happy 
-      happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
-    </p>
-
-    happy happy happy happy happy happy happy happy happy happy happy happy happy 
-    happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
-  </p>
-
-  happy happy happy happy happy happy happy happy happy happy happy happy happy 
-  happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
-</p>
-
-happy happy happy happy happy happy happy happy happy happy happy happy happy 
-        happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
+    <article class="hCard">
+      <a href="../html/product.html" onclick="document.cookie = 'linkSearchTerm=Dell;path=/;'">
+      <img src="https://logos-world.net/wp-content/uploads/2020/08/Dell-Emblem.jpg" alt="dellLogo" height="160px">
+      <p>
+        Dell
       </p>
+    </a>
+    </article>
 
-      happy happy happy happy happy happy happy happy happy happy happy happy happy 
-      happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy happy 
-    </p>
+    <article class="hCard">
+      <a href="../html/product.html" onclick="document.cookie = 'linkSearchTerm=Apple;path=/;'">
+      <img src="https://beebom.com/wp-content/uploads/2021/08/How-to-Type-Apple-Logo-on-iPhone-iPad-and-Mac-1-e1629868886428.jpg?w=750&quality=75" alt="appleLogo" height="160px">
+      <p>Apple</p>
+    </a>
+    </article>
+
+    <article class="hCard">
+      <a href="../html/product.html" onclick="document.cookie = 'linkSearchTerm=Asus;path=/;'">
+      <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo-1995-present.png" alt="AsusLogo" height="160px">
+      <p>ASUS</p>
+    </a>
+    </article>
+
+  </section>
 
 
-      </p>
+</div>
 
-
-      
 
  </div>
 </body>
