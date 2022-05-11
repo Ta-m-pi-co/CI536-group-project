@@ -3,7 +3,8 @@ window.addEventListener('load', function(evt){
     searchBar = document.querySelector('#searchBar');
     var index = 0,
     totalHits,
-    searchingFor = "";
+    searchingFor = "",
+    filterClick = document.querySelectorAll('input[type=checkbox]');
     
     
     if(getCookie("linkSearchTerm")){
@@ -19,6 +20,14 @@ window.addEventListener('load', function(evt){
         searchingFor = searchBar.value
         searchfor(searchingFor, index);
     })
+    
+    for (let i = 0; i < filterClick.length; i++) {
+         filterClick[i].addEventListener("change", function(){
+            var index = 0;
+            searchingFor = searchBar.value
+            searchfor(searchingFor, index);
+        })
+    }
     
     prevBtn.addEventListener("click", function(evt){
         evt.preventDefault();
