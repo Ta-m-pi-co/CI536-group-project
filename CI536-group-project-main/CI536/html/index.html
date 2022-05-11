@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="../css/cards.css">
   <script src="../javascript/navbar.js"></script>
-  <script src="../javascript/index.js"></script>
   <script src="../javascript/issignedin.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
@@ -41,40 +40,60 @@
   </nav>
   
  <div id="home-wrap">
-
-        <!-- Slideshow container from:https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade" style="display:block;">
-    
-    <img src="../ImgSrc/banner1.png">
-    <div class="text"></div>
-  </div>
-
-  <div class="mySlides fade">
-   
-    <img src="../ImgSrc/banner2.png" >
-    <div class="text"></div>
-  </div>
-
-  <div class="mySlides fade">
-    
-    <img src="../ImgSrc/banner3.png" >
-    <div class="text"></div>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
+ <!-- image slider -->
+  <div class="slide_caro">
+  <section class="carousel" aria-label="Gallery">
+    <ol class="carousel__viewport">
+      <li id="carousel__slide1"
+          tabindex="0"
+          class="carousel__slide">
+          <img src="../ImgSrc/banner1.png" alt="">
+        <div class="carousel__snapper">
+          <a href="#carousel__slide3"
+             class="carousel__prev">Go to last slide</a>
+          <a href="#carousel__slide2"
+             class="carousel__next">Go to next slide</a>
+        </div>
+      </li>
+      <li id="carousel__slide2"
+          tabindex="0"
+          class="carousel__slide">
+          <img src="../ImgSrc/banner2.png" alt="">
+        <div class="carousel__snapper"></div>
+        <a href="#carousel__slide1"
+           class="carousel__prev">Go to previous slide</a>
+        <a href="#carousel__slide3"
+           class="carousel__next">Go to next slide</a>
+      </li>
+      <li id="carousel__slide3"
+          tabindex="0"
+          class="carousel__slide">
+          <img src="../ImgSrc/banner3.png" alt="">
+        <div class="carousel__snapper"></div>
+        <a href="#carousel__slide2"
+           class="carousel__prev">Go to previous slide</a>
+        <a href="#carousel__slide1"
+           class="carousel__next">Go to first slide</a>
+      </li>
+    </ol>
+    <aside class="carousel__navigation">
+      <ol class="carousel__navigation-list">
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide1"
+             class="carousel__navigation-button">Go to slide 1</a>
+        </li>
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide2"
+             class="carousel__navigation-button">Go to slide 2</a>
+        </li>
+        <li class="carousel__navigation-item">
+          <a href="#carousel__slide3"
+             class="carousel__navigation-button">Go to slide 3</a>
+        </li>
+        
+      </ol>
+    </aside>
+  </section>
 </div>
      
 
