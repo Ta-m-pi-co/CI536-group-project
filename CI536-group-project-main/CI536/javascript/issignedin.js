@@ -23,6 +23,7 @@ window.addEventListener('load', function(evt){
 
             logBtn.addEventListener("click", function(evt){
                 document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                document.cookie = "basket=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             })
         }
     }

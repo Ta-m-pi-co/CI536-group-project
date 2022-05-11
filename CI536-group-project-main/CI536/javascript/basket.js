@@ -1,12 +1,17 @@
 window.addEventListener('load', function(evt){
+    
+    if (getCookie('username')===null){
+        window.location.href = "https://cw1019.brighton.domains/Laptopia/html/loginsignup.php";
+    }
 
     var arr = JSON.parse(getCookie("basket")),
-    basketItems = document.querySelector(".basket-items"),
+    basketItems = document.querySelector("#basket-items-results"),
     subtotal = document.querySelector("#subtotal"),
     shipping = document.querySelector("#shipping"),
     totalFloat = 0,
     shippingFloat = 14.99,
-    total = document.querySelector("#total");
+    total = document.querySelector("#total"),
+    payBtn = document.querySelector("#make-payment"),
     firstItem = 0;
     console.log("COOKIE " + getCookie("basket"))
 
@@ -15,10 +20,20 @@ window.addEventListener('load', function(evt){
         document.querySelector(".payment").style.display="none";
         document.querySelector(".basket-items").style.marginRight="10%";
     }else{
-        for (var i=0; i < arr.length; i++) {
-            console.log(arr[i].id)
-            searchfor(arr[i].id);
-        }
+        var tempcounter = 0;             
+        displayLoop();            
+    }
+    
+    payBtn.addEventListener("click", placeOrder);
+    
+    function displayLoop() {      
+        setTimeout(function() {   
+            searchfor(arr[tempcounter].id);
+            tempcounter++;                
+            if (tempcounter < arr.length) {       
+                displayLoop();  
+            }                  
+        }, 100)
     }
 
     function searchfor(id) {
@@ -94,7 +109,7 @@ window.addEventListener('load', function(evt){
                         RemoveFromBasket.textContent = "Remove from Basket";
                         btnSection.appendChild(RemoveFromBasket);
 			        })
-			        subtotal.innerHTML = "Subtotal: £"+totalFloat;
+			        subtotal.innerHTML = "Subtotal: £"+totalFloat.toFixed(2);
 			        shipping.innerHTML = "Shipping: £"+shippingFloat;
 			        total.innerHTML = "Total: £"+((totalFloat+shippingFloat).toFixed(2));
 		        }
@@ -102,6 +117,24 @@ window.addEventListener('load', function(evt){
         }
         xhttp.open("GET", "https://cw1019.brighton.domains/Laptopia/html/productsearch.php?searchById="+id, true);
         xhttp.send();
+    }
+    
+    function placeOrder() {
+        let name = document.querySelector("#nameOnCard").value;
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 201) {
+              document.querySelector('#confirmation-notification').style.display = 'block';
+              var orderNumberReceipt = document.createElement("p");
+              orderNumberReceipt.textContent = "Your Order Reference Number is "+xhttp.responseText;
+              document.querySelector('#confirmation-notification').appendChild(orderNumberReceipt);
+              document.cookie = "basket=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            }
+        };
+        xhttp.open("POST", "https://cw1019.brighton.domains/Laptopia/html/createorder.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("name="+name+"&price="+total.textContent.replace("Total: £", ""));
     }
 
     function setCookie(cname, cvalue, exdays) {

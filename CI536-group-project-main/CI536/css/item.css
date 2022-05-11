@@ -144,6 +144,10 @@ img {
 
 .details-sidebar {
     margin: 5px;
+} 
+
+.checked {
+    color: white;
 }
   
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */

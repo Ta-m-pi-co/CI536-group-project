@@ -40,28 +40,43 @@
       <button type="submit" class="fa fa-search"></button>
     </form>
   </nav>
-  
- <div id="basket-wrap">
+  <div class="row">
+    <div class="column small"></div>
+  <div class="payment column side">
+         <h1 style="color:white">Checkout</h1>
+         <p id="subtotal">Subtotal: £</p>
+         <p id="shipping">Shipping: £</p>
+         <p id="total">Total: £</p>
+         <button onclick="document.querySelector('#basket-items-results').style.display = 'none'; document.querySelector('#payment-info').style.display = 'block';">Confirm</button><br><br>
+       </div>
+ <div id="basket-wrap" class="column middle">
     <div class="checkout">
        <div class="basket-items">
 
           <!--This is for testing the responsiveness-->
           <div id="payment-info" style="display:none">
             <label for="fname">Accepted Cards</label>
-            <div class="icon-container" style="background-color: rgb(199, 199, 199);width: fit-content;padding: 0.5%;">
+            <div class="icon-container" style="background-color: rgb(255, 255, 255);width: fit-content;padding: 0.5%;border-radius: 25px;">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
               <i class="fa fa-cc-amex" style="color:blue;"></i>
               <i class="fa fa-cc-mastercard" style="color:red;"></i>
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
-            <p>Card Number: <input type="text" name="CN"><br></p>
-            <p>Name on Card: <input id="nameOnCard" type="text" name="name"><br></p>
-            <p>Expiration Date: <input type="date" name="ED"><br></p>
-            <p>CVV: <input type="text" name="CVV"><br></p>
-            <p>Address: <input type="text" name="address"><br></p>
-            <p>City: <input type="text" name="city"><br></p>
-            <p>Postcode: <input type="text" name="postcode"><br></p>
-            <button onclick="document.querySelector('#payment-info').style.display = 'none';document.querySelector('#confirmation-notification').style.display = 'block';">Sumbit</button>
+            <p>Card Number:<br></p>
+            <input type="text" name="CN"><br>
+            <p>Name on Card:<br></p>
+            <input id="nameOnCard" type="text" name="name"><br>
+            <p>Expiration Date:<br></p>
+            <input type="date" name="ED"><br>
+            <p>CVV:<br></p>
+            <input type="text" name="CVV"><br>
+            <p>Address:<br></p>
+            <input type="text" name="address"><br>
+            <p>City:<br></p>
+            <input type="text" name="city"><br>
+            <p>Postcode:<br></p>
+            <input type="text" name="postcode"><br><br>
+            <button id="make-payment" onclick="document.querySelector('#payment-info').style.display = 'none';document.querySelector('.payment').style.display = 'none';">Make Payment</button>
           </div>
           <div id="confirmation-notification" style="display:none">
             <h1>Order Confirmed</h1>
@@ -72,15 +87,11 @@
           <div id="checkout-error" style="display:none">
             <h1>Error, basket empty</h1>
           </div>
-       </div>
-       <div class="payment">
-         <h1>Checkout</h1>
-         <p id="subtotal">Subtotal: £</p>
-         <p id="shipping">Shipping: £</p>
-         <p id="total">Total: £</p>
-         <button onclick="try{document.querySelectorAll('.card').style.display = 'none';}catch{} document.querySelector('#payment-info').style.display = 'block';">Make Payment</button>
+          <div id="basket-items-results"></div>
        </div>
     </div>
+ </div>
+ <div class="column small"></div>
  </div>
  <script>
     function removeFromBasket(id, firstinlist){
@@ -120,5 +131,53 @@
         return "";
     }
  </script>
+ <style>
+     /* Container for flexboxes */
+    .row {
+      display: -webkit-flex;
+      display: flex;
+      padding-top:5rem;
+    }
+    
+    .column {
+      padding: 10px;
+      height: 300px; 
+    }
+    
+    .column.small {
+       -webkit-flex: 0.5;
+       -ms-flex: 0.5;
+       flex: 0,5;
+    }
+    
+    .column.side {
+       -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1;
+    }
+
+    .column.middle {
+      -webkit-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+    }
+
+    
+    @media (max-width: 600px) {
+      .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+      .basket-items{
+          padding:12px;
+      }
+    }
+    
+    @media (max-width: 1170px) {
+      .column.small {
+          display:none;
+      }
+    }
+</style>
 </body>
 </html>
