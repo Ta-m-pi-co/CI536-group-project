@@ -103,7 +103,7 @@ if(isset($_GET['productId'])){
     <div class="column large" style="background-color: rgb(27, 27, 27)">
       <div class="details-sidebar">
         <p id="stock">IN STOCK (<?php echo $Stock?>)</p>
-        <p id="price">£Price</p>
+        <p id="price"><?php echo $Price ?></p>
         <!-- Laptop specifications -->
         <ul id="specs">
             <li> <?php echo $OS ?> </li>
