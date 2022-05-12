@@ -7,6 +7,7 @@
   /* Root scope - All set-conditions below can be used anywhere in this style-sheet */
   --primary-color: rgb(27, 27, 27);
   --primary-color-light: rgb(54, 54, 54);
+  --off-white: rgba(228, 228, 228, 0.911);
   --secondary-color: rgb(135, 101, 250);
   --accent-gradient: rgb(228, 0, 171);
   --text-primary: white;
@@ -67,20 +68,28 @@ img {
   -webkit-flex: 2;
   -ms-flex: 2;
   flex: 2;
-  border-top-left-radius: 0.8rem;
-  border-bottom-left-radius: 0.8rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
   border: 2px solid var(--secondary-color);
+  min-height: 462px;
 }
 
 .column.large {
   -webkit-flex: 3;
   -ms-flex: 3;
   flex: 3;
-  border-top-right-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
+  padding: 1.25rem;
+  border: 2px solid var(--off-white);
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   min-height: 462px;
 }
-  
+
+#descAndReviews {
+  border: 2px solid var(--accent-gradient);
+  border-radius: 1.5rem;
+}
+
   /* Style the footer */
 .footer {
   position: absolute;
@@ -94,8 +103,15 @@ img {
   margin: 1.2rem 0 0 0;
 }
 
+#productImage {
+  padding: 6%;
+}
+
 #product_title {
-  border: 2px solid var(--text-secondary);
+  position: relative;
+  margin: 4rem 0 0 0;
+  background: black;
+  border: 2px solid var(--secondary-color);
   border-radius: 0.8rem;
   font-family: Ubuntu, sans-serif;
 }
@@ -116,13 +132,13 @@ img {
   font-size: 48px;
   font-weight: 600;
   line-height: 60px;
-  letter-spacing: 0em;
   color: white;
   padding-top: 10px;
 }
 
 #specs li {
-  margin: 0 0 1rem 3rem;
+  margin: 1rem;
+  list-style-type: circle;
   list-style-position: inside;
 }
 
@@ -130,14 +146,19 @@ img {
   display: block;
   margin: 2rem auto;
   padding: 1rem 1.5rem;
-  color: white;
-  background-color: black;
-  border-radius: 10px;
-  border: 2px solid var(--secondary-color);
-  font-size: 2rem;
+  color: var(--off-white);
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(45deg, var(--secondary-color), var(--accent-gradient)) border-box;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   font-family: Roboto, sans-serif;
+  letter-spacing: 2px;
   cursor: pointer;
+  transition: box-shadow 175ms ease-in-out;
 } #basketBtn:hover, #basketBtn:active {
   box-shadow: 0 0 18px var(--secondary-color);
 }
@@ -158,13 +179,6 @@ img {
   }
 }
 
-@media (max-width: 980px) and (min-width: 801px) {
-  #product_title {
-    position: relative;
-    margin: 4rem 0 0 0;
-  }
-}
-
 @media (max-width: 800px) {
   .row {
     -webkit-flex-direction: column;
@@ -176,23 +190,48 @@ img {
     flex-direction: row;
   }
 
+  .column.large {
+    padding-bottom: 5px;
+    border-bottom-right-radius: 12%;
+    border-bottom-left-radius: 12%;
+    border-top-right-radius: 0;
+  }
+
   .column.middle {
     border-top-left-radius: 12%;
     border-top-right-radius: 12%;
     border-bottom-left-radius: 0;
   }
 
-  #productImage {
-    padding: 6%;
+  #product_title {
+    margin: 0;
+  }
+
+  #price {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #basketBtn {
+    font-size: 1.5rem;
   }
 
   .header {
     margin-top: 2em;
+    margin-bottom: -1rem;
   }
 
   .footer {
     position:relative;
     width: 100%;
     height: 2.5rem;            /* Footer height */
+  }
+}
+
+@media (max-width: 400px) {
+  .selectimages {
+    padding: 10px;
+    display: block;
+    columns: 2;
   }
 }

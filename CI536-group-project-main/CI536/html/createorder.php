@@ -41,13 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mail($email,"Laptopia: Reciept of Purchase",$msg,$headers);
                 echo $orderId;
             }
-        }else{
+        } else {
             http_response_code(500);
         }
-    }else{
+    } else {
         http_response_code(400);
     }
-}else{
+} else {
     http_response_code(405);
 }
 

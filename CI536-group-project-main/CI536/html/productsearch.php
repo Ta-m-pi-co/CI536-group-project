@@ -2,7 +2,6 @@
 
 include_once "config.php";
 
-	$conn = mysqli_connect('localhost', 'cw1019_admin', '0B+F4pp_~u{p', 'cw1019_laptopia_database');
 	$orderby = "Rating";
 	$filters = "";
     $conn = dbConnection();
