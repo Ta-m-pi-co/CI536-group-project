@@ -5,15 +5,12 @@ include_once "config.php";
 $conn = dbConnection();
 $Id; $Name; $Price; $OS; $CPU; $RAM; $GraphicsCard; $Storage; $Dimensions; $Image; $Rating; $Stock; $Description;
 
-
 if(isset($_GET['productId'])){
     $productId = $_GET['productId'];
-    if (!$conn) {
-         http_response_code(500);
-    } else {
-        $productId = $conn->real_escape_string($productId);
-        $sql = "SELECT * FROM Products WHERE ProductId = '$productId'";
-        $result = $conn->query($sql);
+    $productId = $conn->real_escape_string($productId);
+    $sql = "SELECT * FROM Products WHERE ProductId = '$productId'";
+    $result = $conn->query($sql);
+
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $Id = $row["ProductId"];
@@ -33,7 +30,7 @@ if(isset($_GET['productId'])){
         } else {
             echo "Product doesnt exist";
         }
-    }
+
     $conn->close(); 
 }
 ?>
@@ -54,6 +51,7 @@ if(isset($_GET['productId'])){
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <nav class="navbar">
     <div class="menu-icon">
       <i class="fa fa-bars"></i>
@@ -68,7 +66,6 @@ if(isset($_GET['productId'])){
         <li><a href="loginsignup.php" id="logSign"  aria-hidden="true">login/sign up</a></li>
       </ul>
     </div>
-    
     <div class="search-icon">
       <i class="fa fa-search"></i>
     </div>
@@ -144,15 +141,19 @@ if(isset($_GET['productId'])){
         let name = cname + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
         let ca = decodedCookie.split(';');
+        
         for(let i = 0; i <ca.length; i++) {
           let c = ca[i];
+          
           while (c.charAt(0) == ' ') {
             c = c.substring(1);
           }
+          
           if (c.indexOf(name) == 0) {
             return c.substring(name.length, c.length);
           }
         }
+
         return "";
     }
 
@@ -166,8 +167,8 @@ if(isset($_GET['productId'])){
     if(getCookie("basket")==""){setCookie("basket","[{}]",1)}
     
     function addComma(){
-        if(getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
+        if (getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
     }
-     </script>
+  </script>
 </body>
 </html>
