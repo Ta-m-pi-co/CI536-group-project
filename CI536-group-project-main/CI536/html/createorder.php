@@ -1,5 +1,7 @@
 <?php
 
+include_once "config.php";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_COOKIE[username])&&isset($_POST[name])&&isset($_POST[price])&&isset($_COOKIE[basket])){
         
@@ -8,9 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email;
         $fullname = urldecode($_POST[name]);
         $price = urldecode($_POST[price]);
-        $basket = json_decode($_COOKIE[basket],true);
-          
-        $conn = mysqli_connect('localhost', 'cw1019_admin', '0B+F4pp_~u{p', 'cw1019_laptopia_database');
+        $basket = json_decode($_COOKIE[basket],true);  
+        $conn = dbConnection();
+    
         if($conn->connect_error == null){
             
             $sql = "SELECT `UserId`, `Email` FROM `Users` WHERE `Username` = '$username'";

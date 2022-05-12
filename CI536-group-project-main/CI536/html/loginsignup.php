@@ -1,10 +1,12 @@
 <?php
     
+include_once "config.php";
+
 	$errorL = '';
 	$errorS = '';
 	$logo = '../ImgSrc/laptopialogo3.png';
 	
-	$conn = mysqli_connect('localhost', 'cw1019_admin', '0B+F4pp_~u{p', 'cw1019_laptopia_database');
+	$conn = dbConnection();
 	
 	if(isset($_GET['lusername'])&&isset($_GET['lpassword'])){
     	$lUsername = $_GET['lusername'];

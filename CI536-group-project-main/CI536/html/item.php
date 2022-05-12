@@ -1,5 +1,8 @@
 <?php
-$conn = mysqli_connect('localhost', 'cw1019_admin', '0B+F4pp_~u{p', 'cw1019_laptopia_database');
+
+include_once "config.php";
+
+$conn = dbConnection();
 $Id; $Name; $Price; $OS; $CPU; $RAM; $GraphicsCard; $Storage; $Dimensions; $Image; $Rating; $Stock; $Description;
 
 

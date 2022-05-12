@@ -11,9 +11,10 @@
   --accent-gradient: rgb(228, 0, 171);
   --text-primary: white;
   --text-secondary: rgb(189, 189, 189);
+  scroll-behavior: smooth;
   font-size: 18px;
 }
-/* Default styling for elements*/
+/* Default styling for elements */
 * {
   margin: 0;
   padding: 0;
@@ -26,10 +27,21 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+nav {
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+
 p {
   color: white;
 }
-/*body*/
+
 body {
   background: rgb(15, 14, 26);
   background-size: cover;
@@ -39,17 +51,15 @@ body {
  
   
 }
+
 #home-wrap {
   padding-top: 5rem;
 }
-
-/* home cards*/
 
 .home-cards{
   padding: 5% 20% 20% 10%;
   margin-left: 10%;
   margin-right: auto;
-  
 }
 
 .home-cards p {
@@ -64,7 +74,6 @@ body {
 }
 
 .hCard{
- 
     flex: 0 1 24%;
 }
 
@@ -74,20 +83,13 @@ body {
 
 .hCard a {
  text-decoration: none; 
-
-
 }
-/*navigation bar*/
-/*primary nav element*/
-nav
- {
-  background: #171c24;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 70px;
-  padding: 0 100px;
+
+/* navigation bar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 /*Main Logo*/
@@ -599,13 +601,10 @@ label:hover {
 .basket-items {
   padding: 2rem;
   margin: 0.4rem;
-  
   border-style: solid;
   border-radius: 2rem;  
   border-color: purple; /*change for card colours*/
   flex: 1;
-
-  
 }
 /*basket wrap*/
 
@@ -768,14 +767,6 @@ text-align: center;
 
 /*small screens*/
 @media (max-width: 980px) {
-  .navbar {
-  position: fixed;
-    width: 100vw;
-    z-index: 1;
-    
-  }
- 
- 
   nav .menu-icon,
   nav .cancel-icon,
   nav .search-icon {
