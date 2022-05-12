@@ -148,7 +148,7 @@ img {
   padding: 1rem 1.5rem;
   color: var(--off-white);
   background: linear-gradient(black, black) padding-box, 
-              linear-gradient(45deg, var(--secondary-color), var(--accent-gradient)) border-box;
+              linear-gradient(90deg, var(--secondary-color), var(--accent-gradient)) border-box;
   border-width: 5px;
   border-style: solid;
   border-color: transparent;
