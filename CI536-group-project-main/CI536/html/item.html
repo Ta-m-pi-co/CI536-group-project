@@ -89,7 +89,19 @@
       <div class="description">
         <p>Description</p>
       </div>
-      <div class="description" style="display:none">
+      <div class="description" id="lareview">
+        <br>
+        <p>Leave a Review?</p>
+        <span id="star1" class="rating__star fa fa-star"></span>
+        <span id="star2" class="rating__star fa fa-star"></span>
+        <span id="star3" class="rating__star fa fa-star"></span>
+        <span id="star4" class="rating__star fa fa-star"></span>
+        <span id="star5" class="rating__star fa fa-star"></span>
+        <span id="users-product-rating" style="display: none;">0</span>
+        <br><br><input type="text" id="reviewText" name="reviewText" style="width: -webkit-fill-available;height: 120px;">
+      </div>
+      <div class="description" id="reviews" style="display:none;">
+        <br>
         <p>Reviews</p>
       </div>
     </div>
@@ -127,6 +139,32 @@
     function addComma(){
         if(getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
     }
+
+    const ratingStars = [...document.getElementsByClassName("rating__star")];
+    const overallRating = document.querySelector('#users-product-rating');
+
+    function executeRating(stars) {
+      const starClassActive = "rating__star fa fa-star checked";
+      const starClassInactive = "rating__star fa fa-star";
+      const starsLength = stars.length;
+      let i;
+      stars.map((star) => {
+        star.onclick = () => {
+          i = stars.indexOf(star);
+          let x;
+
+          if (star.className===starClassInactive) {
+            x = 0;
+            for (i; i >= 0; --i) {stars[i].className = starClassActive;x=x+20;}
+          } else {
+            x = 100;
+            for (i; i < starsLength; ++i) {stars[i].className = starClassInactive;x=x-20;}
+          }
+          overallRating.textContent=x;
+        };
+      });
+    }
+    executeRating(ratingStars);
      </script>
 </body>
 </html>
