@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../javascript/navbar.js"></script>
   <script src="../javascript/index.js"></script>
+  <script src="../javascript/item.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -139,32 +140,6 @@
     function addComma(){
         if(getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
     }
-
-    const ratingStars = [...document.getElementsByClassName("rating__star")];
-    const overallRating = document.querySelector('#users-product-rating');
-
-    function executeRating(stars) {
-      const starClassActive = "rating__star fa fa-star checked";
-      const starClassInactive = "rating__star fa fa-star";
-      const starsLength = stars.length;
-      let i;
-      stars.map((star) => {
-        star.onclick = () => {
-          i = stars.indexOf(star);
-          let x;
-
-          if (star.className===starClassInactive) {
-            x = 0;
-            for (i; i >= 0; --i) {stars[i].className = starClassActive;x=x+20;}
-          } else {
-            x = 100;
-            for (i; i < starsLength; ++i) {stars[i].className = starClassInactive;x=x-20;}
-          }
-          overallRating.textContent=x;
-        };
-      });
-    }
-    executeRating(ratingStars);
-     </script>
+  </script>
 </body>
 </html>

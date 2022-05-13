@@ -46,6 +46,7 @@ if(isset($_GET['productId'])){
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="../javascript/navbar.js"></script>
   <script src="../javascript/index.js"></script>
+  <script src="../javascript/item.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -122,10 +123,22 @@ if(isset($_GET['productId'])){
     <!-- product description -->
     <div class="column smallside" ></div>
     <div class="column middle" id="descAndReviews">
-      <div class="description">
-        <p><?php echo $Description?></p>
+    <div class="description">
+        <p>Description</p>
       </div>
-      <div class="description" style="display:none">
+      <div class="description" id="lareview">
+        <br>
+        <p>Leave a Review?</p>
+        <span id="star1" class="rating__star fa fa-star"></span>
+        <span id="star2" class="rating__star fa fa-star"></span>
+        <span id="star3" class="rating__star fa fa-star"></span>
+        <span id="star4" class="rating__star fa fa-star"></span>
+        <span id="star5" class="rating__star fa fa-star"></span>
+        <span id="users-product-rating" style="display: none;">0</span>
+        <br><br><textarea id="reviewText" style="width: -webkit-fill-available;height: 120px;"></textarea>
+      </div>
+      <div class="description" id="reviews" style="display:none;">
+        <br>
         <p>Reviews</p>
       </div>
     </div>
@@ -163,6 +176,6 @@ if(isset($_GET['productId'])){
     function addComma(){
         if(getCookie("basket")!="[{}]"){setCookie("basket",getCookie('basket').substring(0,getCookie('basket').length-1)+",{}]",1)}
     }
-     </script>
+  </script>
 </body>
 </html>
