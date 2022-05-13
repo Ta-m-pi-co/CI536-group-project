@@ -124,7 +124,7 @@ if(isset($_GET['productId'])){
     <div class="column smallside" ></div>
     <div class="column middle" id="descAndReviews">
     <div class="description">
-        <p>Description</p>
+        <p><?php echo $Description ?></p>
       </div>
       <div class="description" id="lareview">
         <br>
