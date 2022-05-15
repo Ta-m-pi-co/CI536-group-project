@@ -86,6 +86,7 @@ if(isset($_GET['productId'])){
       <span class="<?php if ($Rating < 60){echo "fa fa-star";}else{echo "fa fa-star checked";}?>"></span>
       <span class="<?php if ($Rating < 80){echo "fa fa-star";}else{echo "fa fa-star checked";}?>"></span>
     </div>
+    <p id="the-product-id" style="display:none;"><?php echo $Id ?><p>
   </div>
   
   <div class="row">
@@ -136,6 +137,8 @@ if(isset($_GET['productId'])){
         <span id="star5" class="rating__star fa fa-star"></span>
         <span id="users-product-rating" style="display: none;">0</span>
         <br><br><textarea id="reviewText" style="width: -webkit-fill-available;height: 120px;"></textarea>
+        <button class="btn1" type="button" id="submit-review">Submit</button>
+        <br><br>
       </div>
       <div class="description" id="reviews" style="display:none;">
         <br>
