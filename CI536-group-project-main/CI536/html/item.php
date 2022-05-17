@@ -47,6 +47,7 @@ if(isset($_GET['productId'])){
   <script src="../javascript/navbar.js"></script>
   <script src="../javascript/index.js"></script>
   <script src="../javascript/item.js"></script>
+  <script src="../javascript/issignedin.js"></script>
   <script src="https://kit.fontawesome.com/af7a93ff0b.js" crossorigin="anonymous"></script>
 </head>
 <body>
