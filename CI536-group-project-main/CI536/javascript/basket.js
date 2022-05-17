@@ -18,7 +18,6 @@ window.addEventListener('load', function(evt){
     if (getCookie("basket")===null||getCookie("basket")==='[{}]'){
         document.querySelector("#checkout-error").style.display="block";
         document.querySelector(".payment").style.display="none";
-        document.querySelector(".basket-items").style.marginRight="10%";
     }else{
         var tempcounter = 0;             
         displayLoop();            

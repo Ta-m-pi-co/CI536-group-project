@@ -71,7 +71,7 @@ img {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   border: 2px solid var(--secondary-color);
-  min-height: 462px;
+  min-height: 200px;
 }
 
 .column.large {
