@@ -49,7 +49,7 @@ document.querySelector("#signup-username").addEventListener("keyup", () => {
     if (username.length < 33 && username.length > 3) {
         form.classList.add("valid");
         form.classList.remove("invalid");
-        usernameMsg.innerHTML = "Your username is valid͡°)";
+        usernameMsg.innerHTML = "Your username is valid";
         usernameMsg.style.color = "#00ff00";
         document.getElementById("signup-username").classList.add("success");
         document.getElementById("signup-username").classList.remove("error");
